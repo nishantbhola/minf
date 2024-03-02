@@ -1,0 +1,130 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&display=swap');
+
+   .menuc {
+    cursor:pointer;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    text-align:center;
+    height: 50px;
+    width:50px;
+  }
+  
+  .menuc span {
+    font-size: 30px;
+    height: 40px;
+    line-height: 40px;
+  }
+  .add {
+    display: block;
+    font-weight: bold;
+    height: 40px;
+    transition: all .4s ease-in-out;
+  }
+  .plus {
+    width:50px;
+    height:50px;
+    display: flex;
+    background: rgba(0,0,0,0.8);
+    transition: all .4s ease-in-out;
+    justify-content: center;
+    align-items: center;
+    font-size: 70px;
+    border-radius: 10px;
+    
+  }
+
+  .rotate{
+    -webkit-transform: rotate(45deg);
+  }
+
+.pop {
+  background: rgba(0, 0, 0, 0.8);
+  font: 1.25em 'Myriad Pro';
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top:0;
+  color: white;
+  cursor: pointer;
+  padding-top: 100px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out;
+  z-index:10;
+}
+
+.pop.open {
+  max-height: 300px; 
+  animation: heightUp 0.3s ease-in-out; 
+}
+
+@keyframes heightUp {
+  from {
+    max-height: 0;
+  }
+  to {
+    max-height: 300px; 
+  }
+}
+
+  
+  .pop li {
+    border-bottom: 0.5px solid #7e7e7e;
+    margin: 0 auto;
+    width:50%;
+    padding:10px;
+    text-align: center;
+  }
+  .pop li:last-of-type {
+    border: 0;
+  }
+  .pop li:hover {
+    background: rgba(255,0,0,0.8);
+  }
+  .pop li:hover:nth-child(2n){
+    border-radius: 0;
+  }
+
+  .thumbnail {
+    cursor: pointer;
+}
+
+.badr{
+  backdrop-filter: saturate(200%) blur(7px);
+}
+
+.fade-in-image {
+  transition: opacity 0.5s;
+  opacity: 0;
+}
+
+.fade-in-image.active {
+  opacity: 100%;
+}
+
+.anton{
+  font-family: 'Anton', sans-serif;
+  text-transform: uppercase;
+}
+
+.bebas{
+  font-family: 'Bebas Neue', sans-serif;
+  letter-spacing: 1.5px;
+  font-weight: bold;
+}
+
+.middle{
+  width: 100%;
+}
+
+@media only screen and (max-width:5000px) and (min-width:1400px){
+
+  .middle{
+    width: 90rem;
+  }
+}
