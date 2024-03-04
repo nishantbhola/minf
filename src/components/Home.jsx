@@ -13,8 +13,10 @@ function Home() {
     open ? setOpen(false) : setOpen(true)
   }
 
+  
+
   return (
-    <div className="">
+    <div className="" >
       <div className={`bg-neutral-900 md:hidden flex justify-center items-center h-[100vh] realative fixed z-50 ${open ? "w-[60%] transition-width duration-500" : "w-0 transition-width duration-500"} opacity-90 top-0 `}>
         <div className="h-[100px] mobafter flex justify-center items-center w-[40px] bg-neutral-900 top-1/2 rounded-r-full  absolute right-[-39px]">
           <div class="ham">
@@ -54,14 +56,17 @@ function Home() {
           bgImageAlt="the cat"
           strength={200}
         >
-          <div className="md:h-[700px] h-[200px] w-full flex justify-center bg-black opacity-50 items-center">
-            <span className="text-8xl text-white thermite">
+          <div className="md:h-[600px] h-[300px] w-full flex justify-center bg-black opacity-50 items-center">
+            <span className="md:text-8xl text-center text-4xl text-white thermite">
               MUAYTHAI NATIONAL EVENT
             </span>
           </div>
         </Parallax>
         <div className="container mx-auto px-5">
           <MidSec />
+        </div>
+        <div>
+          
         </div>
       </div>
       <Footer />

@@ -24,17 +24,17 @@ function Nav({isOpen}) {
   return (
     <div>
       <div
-        className={`mx-auto w-[60%] md:w-[100%] flex justify-center rounded-xl ${
+        className={`mx-auto w-[60%] md:w-[100%] container flex justify-center rounded-xl ${
           isSticky ? "mt-0" : "md:mt-8 mt-4"
         }`}
       >
         <nav
-          className={`z-40 text-md cus h-[60px] relative mx-auto flex justify-center items-center w-[80%] rounded-b-2xl bg-[#E9EAEC] ${
+          className={`z-40 text-md cus h-[60px] relative mx-auto container flex justify-center items-center w-[80%] rounded-b-2xl bg-[#E9EAEC] ${
             isSticky ? "sticky h-[80px] bg-neutral-900 cus2" : ""
           }`}
         >
           <div
-            className={`relative md:flex hidden hover:text-red-600 ${isOpen ? "w-[80%]" : "w-[90%]"} items-center justify-evenly ${
+            className={`relative md:flex hidden  ${isOpen ? "w-[80%]" : "w-[90%]"} items-center justify-evenly ${
               isSticky ? "text-md" : "text-lg"
             }`}
             style={{
@@ -77,7 +77,7 @@ function Nav({isOpen}) {
         </nav>
       </div>
       <div
-        className={`h-[85vh] md:h-[92vh] px-5  ${
+        className={`h-[85vh] md:h-[92vh] md:px-5 px-2  ${
           isSticky ? "mt-[0px]" : "mt-[-60px]"
         }`}
       >
