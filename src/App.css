@@ -144,7 +144,7 @@ a.selected::after {
 
 
   .ham {
-    --color: #ffffff; 
+    color: #ffffff;
     background: none;
     width: 100px;
     height: 56px;
@@ -152,51 +152,50 @@ a.selected::after {
     display: flex;
     justify-content: center;
     align-items: center;
-    svg {
-        fill: none;
-        stroke: var(--color);
-        stroke-width: 15px;
-        stroke-linecap: round;
-        stroke-linejoin: round;
-        height: 30px;
-        width: 30px;
-        margin-top: 5px;
-      use {
-        &:nth-of-type(1) {
-          opacity: 1;
-          stroke-dashoffset: 221;
-          stroke-dasharray: 46 249;
-          transition: stroke-dashoffset .12s linear .2s, stroke-dasharray .12s linear .2s, opacity 0s linear .2s;  
-        }
-        &:nth-of-type(2) {
-          animation: stroke-animation-reverse 1.2s ease-out forwards;
-        } 
-      }
-    }
-    input {
-      position: absolute;
-      height: 100%;
-      width: 100%;
-      z-index: 2;
-      cursor: pointer;
-      opacity: 0;
-      &:checked {
-        + svg {
-          use {
-            &:nth-of-type(1) {
-              stroke-dashoffset: 175;
-              stroke-dasharray: 0 295;
-              opacity: 0;
-              transition: stroke-dashoffset .07s linear .07s, stroke-dasharray .07s linear .07s, opacity 0s linear .14s;  
-            }
-            &:nth-of-type(2) {
-              animation: stroke-animation 1.2s ease-out forwards;
-            } 
-          }
-        }
-      }
-    }
   }
+  
+  .ham svg {
+    fill: none;
+    stroke: #ffffff;
+    stroke-width: 15px;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    height: 30px;
+    width: 30px;
+    margin-top: 5px;
+  }
+  
+  .ham svg use:nth-of-type(1) {
+    opacity: 1;
+    stroke-dashoffset: 221;
+    stroke-dasharray: 46 249;
+    transition: stroke-dashoffset .12s linear .2s, stroke-dasharray .12s linear .2s, opacity 0s linear .2s;
+  }
+  
+  .ham svg use:nth-of-type(2) {
+    animation: stroke-animation-reverse 1.2s ease-out forwards;
+  }
+  
+  .ham input {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 2;
+    cursor: pointer;
+    opacity: 0;
+  }
+  
+  .ham input:checked + svg use:nth-of-type(1) {
+    stroke-dashoffset: 175;
+    stroke-dasharray: 0 295;
+    opacity: 0;
+    transition: stroke-dashoffset .07s linear .07s, stroke-dasharray .07s linear .07s, opacity 0s linear .14s;
+  }
+  
+  .ham input:checked + svg use:nth-of-type(2) {
+    animation: stroke-animation 1.2s ease-out forwards;
+  }
+  
   
   @keyframes stroke-animation {
     0% {

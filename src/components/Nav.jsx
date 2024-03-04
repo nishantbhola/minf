@@ -43,10 +43,10 @@ function Nav({isOpen}) {
               color: isSticky ? "white" : "black",
             }}
           >
-            <a href="#">EVENT</a>
-            <a href="#">RANKINGS</a>
-            <a href="#">NEWS</a>
-            <a href="#" className="selected">
+            <a href="/">EVENT</a>
+            <a href="/">RANKINGS</a>
+            <a href="/">NEWS</a>
+            <a href="/" className="selected">
               <img
                 src={isSticky ? logo : logoin}
                 className={
@@ -55,12 +55,12 @@ function Nav({isOpen}) {
                 alt="logo"
               />
             </a>
-            <a href="#">CONNECT</a>
-            <a href="#">ABOUT</a>
-            <a href="#">CONTACT</a>
+            <a href="/">CONNECT</a>
+            <a href="/">ABOUT</a>
+            <a href="/">CONTACT</a>
           </div>
           <a
-            href="#"
+            href="/"
             className="selected md:hidden block"
             style={{ top: isSticky ? 0 : "-12%" }}
           >

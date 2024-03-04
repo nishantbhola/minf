@@ -32,12 +32,12 @@ function Home() {
           </svg>
         </div>
             <div className={`${open? "grid" : "hidden"} text-white thermite text-center mt-[-70px] text-2xl gap-8`}>
-              <a href="#">EVENT</a>
-              <a href="#">RANKINGS</a>
-              <a href="#">NEWS</a>
-              <a href="#">CONNECT</a>
-              <a href="#">ABOUT</a>
-              <a href="#">CONTACT</a>
+              <a href="/">EVENT</a>
+              <a href="/">RANKINGS</a>
+              <a href="/">NEWS</a>
+              <a href="/">CONNECT</a>
+              <a href="/">ABOUT</a>
+              <a href="/">CONTACT</a>
             </div>
       </div>
       <Nav open={isOpen}/>
