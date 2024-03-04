@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import logo from "../logo.png";
 import logoin from "../logo-invert.png";
 
-function Nav() {
+function Nav({isOpen}) {
   const [isSticky, setIsSticky] = useState(false);
 
   useEffect(() => {
@@ -34,7 +34,7 @@ function Nav() {
           }`}
         >
           <div
-            className={`relative md:flex hidden hover:text-red-600  w-[90%] items-center justify-evenly ${
+            className={`relative md:flex hidden hover:text-red-600 ${isOpen ? "w-[80%]" : "w-[90%]"} items-center justify-evenly ${
               isSticky ? "text-md" : "text-lg"
             }`}
             style={{

@@ -110,3 +110,129 @@ a.selected::after {
     background: url('https://cdn.onefc.com/wp-content/uploads/2022/08/live-in-hd-one-on-prime-video-1-moraes-vs-johnson-ii-press-conference-1.jpg') no-repeat center /cover ;
     filter: brightness(0.7);
   }
+
+
+
+.mobafter{
+    margin-top: -80px;
+}
+
+
+  .mobafter:after{
+    content: "";
+    height: 20px;
+    width: 20px;
+    background-color: transparent;
+    position: absolute;
+    bottom: -16px;
+    left: 1px;
+    box-shadow: -17px -10px 0px 10px #171717;
+    border-top-left-radius: 50px;
+  }
+
+  .mobafter:before{
+    content: "";
+    height: 20px;
+    width: 20px;
+    background-color: transparent;
+    position: absolute;
+    top: -16px;
+    left: 1px;
+    box-shadow: -17px 10px 0px 10px #171717;
+    border-bottom-left-radius: 50px;
+  }
+
+
+  .ham {
+    --color: #ffffff; 
+    background: none;
+    width: 100px;
+    height: 56px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    svg {
+        fill: none;
+        stroke: var(--color);
+        stroke-width: 15px;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        height: 30px;
+        width: 30px;
+        margin-top: 5px;
+      use {
+        &:nth-of-type(1) {
+          opacity: 1;
+          stroke-dashoffset: 221;
+          stroke-dasharray: 46 249;
+          transition: stroke-dashoffset .12s linear .2s, stroke-dasharray .12s linear .2s, opacity 0s linear .2s;  
+        }
+        &:nth-of-type(2) {
+          animation: stroke-animation-reverse 1.2s ease-out forwards;
+        } 
+      }
+    }
+    input {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      z-index: 2;
+      cursor: pointer;
+      opacity: 0;
+      &:checked {
+        + svg {
+          use {
+            &:nth-of-type(1) {
+              stroke-dashoffset: 175;
+              stroke-dasharray: 0 295;
+              opacity: 0;
+              transition: stroke-dashoffset .07s linear .07s, stroke-dasharray .07s linear .07s, opacity 0s linear .14s;  
+            }
+            &:nth-of-type(2) {
+              animation: stroke-animation 1.2s ease-out forwards;
+            } 
+          }
+        }
+      }
+    }
+  }
+  
+  @keyframes stroke-animation {
+    0% {
+      stroke-dashoffset: 295;
+      stroke-dasharray: 25 270;
+    }
+    50% {
+      stroke-dashoffset: 68;
+      stroke-dasharray: 59 236;
+    }
+    65% {
+      stroke-dashoffset: 59;
+      stroke-dasharray: 59 236;
+    }
+    100% {
+      stroke-dashoffset: 68;
+      stroke-dasharray: 59 236;
+    }
+  }
+  
+  @keyframes stroke-animation-reverse {
+    0% {
+      stroke-dashoffset: 68;
+      stroke-dasharray: 59 236;
+    }
+    50% {
+      stroke-dashoffset: 290;
+      stroke-dasharray: 25 270;
+    }
+    65% {
+      stroke-dashoffset: 295;
+      stroke-dasharray: 25 270;
+    }
+    100% {
+      stroke-dashoffset: 290;
+      stroke-dasharray: 25 270;
+    }
+  }
+  
