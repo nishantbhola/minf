@@ -7,7 +7,7 @@ function Footer() {
       <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
         <div class="md:flex md:justify-around">
           <div class="mb-8 md:mb-0">
-            <a href="#" class="">
+            <a href="/" class="">
               <img
                 src={logo}
                 class="h-[100px] mix-blend-difference"
@@ -62,12 +62,12 @@ function Footer() {
               </h2>
               <ul class="text-gray-500 dark:text-gray-400 font-medium">
                 <li class="mb-4">
-                  <a href="#" class="hover:underline">
+                  <a href="/" class="hover:underline">
                     Privacy Policy
                   </a>
                 </li>
                 <li>
-                  <a href="#" class="hover:underline">
+                  <a href="/" class="hover:underline">
                     Terms &amp; Conditions
                   </a>
                 </li>
@@ -86,7 +86,7 @@ function Footer() {
           </span>
           <div class="flex mt-4 sm:justify-center sm:mt-0">
             <a
-              href="#"
+              href="/"
               class="text-gray-500 hover:text-gray-900 dark:hover:text-white"
             >
               <svg
@@ -105,7 +105,7 @@ function Footer() {
               <span class="sr-only">Facebook page</span>
             </a>
             <a
-              href="#"
+              href="/"
               class="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5"
             >
               <svg
@@ -120,7 +120,7 @@ function Footer() {
               <span class="sr-only">Discord community</span>
             </a>
             <a
-              href="#"
+              href="/"
               class="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5"
             >
               <svg
@@ -139,7 +139,7 @@ function Footer() {
               <span class="sr-only">Twitter page</span>
             </a>
             <a
-              href="#"
+              href="/"
               class="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5"
             >
               <svg
@@ -158,7 +158,7 @@ function Footer() {
               <span class="sr-only">GitHub account</span>
             </a>
             <a
-              href="#"
+              href="/"
               class="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5"
             >
               <svg
