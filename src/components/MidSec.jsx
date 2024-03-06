@@ -3,9 +3,6 @@ import React from "react";
 function MidSec() {
   return (
     <div className=" w-full container mx-auto rounded-xl">
-      <div className="text-4xl mt-8 md:text-5xl w-full flex justify-center items-center h-[80px] thermite">
-        WHAT'S TRENDING NOW
-      </div>
       <div className=" w-full mt-4 container mx-auto grid sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-5 mb-16">
         <div className="w-full  border-gray-400">
           <img

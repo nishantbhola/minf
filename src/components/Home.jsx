@@ -4,6 +4,11 @@ import MidSec from "./MidSec";
 import { Parallax } from "react-parallax";
 import { useState } from "react";
 import KeyboardArrowRightRoundedIcon from "@mui/icons-material/KeyboardArrowRightRounded";
+import Feeds from "./Feeds";
+import wbc from "../wbc.png";
+import xtremex from "../xtreme-in.png";
+import logo from "../logo.png";
+import beco from "../becomemem.jpeg";
 
 function Home() {
   const [open, setOpen] = useState(false);
@@ -73,12 +78,13 @@ function Home() {
             </span>
           </div>
         </Parallax>
+
         <div className="text-4xl mt-8 md:text-5xl w-full flex justify-center items-center h-[80px] thermite">
           WHAT'S TRENDING NOW
         </div>
         <div className="container mx-auto px-5">
           <div>
-            <div className="flex mb-12 justify-between border-b-2 border-gray-600">
+            <div className="flex mb-12 justify-between border-b-2 border-gray-400">
               <p className="text-3xl text-gray-700 thermite pb-2">Featured</p>
               <p className="text-gray-500 text-lg cursor-pointer thermite">
                 view all <KeyboardArrowRightRoundedIcon />
@@ -86,8 +92,12 @@ function Home() {
             </div>
             <MidSec />
           </div>
+          <div className="">
+            <div className="flex mb-5 justify-between border-b-2"></div>
+            <Feeds />
+          </div>
           <div>
-            <div className="flex mb-12 justify-between border-b-2 border-gray-600">
+            <div className="flex mb-12 justify-between border-b-2 border-gray-400">
               <p className="text-3xl text-gray-700 thermite pb-2">Events</p>
               <p className="text-gray-500 text-lg cursor-pointer thermite">
                 view all <KeyboardArrowRightRoundedIcon />
@@ -95,18 +105,54 @@ function Home() {
             </div>
             <MidSec />
           </div>
-          <div>
-            <div className="flex mb-12 justify-between border-b-2 border-gray-600">
-              <p className="text-3xl text-gray-700 thermite pb-2">Video</p>
-              <p className="text-gray-500 text-lg cursor-pointer thermite">
-                view all <KeyboardArrowRightRoundedIcon />
-              </p>
-            </div>
-            <MidSec />
-          </div>
         </div>
-        <div></div>
+
+        <Parallax
+          blur={7}
+          bgImage="https://i.pinimg.com/originals/ca/7d/2f/ca7d2fd4c3ed6ebac88e5ff2a90810ce.jpg"
+          bgImageAlt="the collab"
+          strength={200}
+        >
+          <div className=" h-[300px] md:h-[500px] w-full flex flex-col justify-center items-center">
+            <p className="text-center thermite text-2xl md:text-4xl text-white opacity-80">
+              Collaboration
+            </p>
+            <div className="w-full h-[150px] md:h-[250px] gap-5 md:gap-28 flex justify-center items-center">
+              <img
+                src={xtremex}
+                alt=""
+                className=" h-[80px] md:h-[150px] object-cover"
+              />
+              <img
+                src={logo}
+                alt=""
+                className=" h-[80px] md:h-[150px] object-cover"
+              />
+              <img
+                src={wbc}
+                alt=""
+                className=" h-[80px] md:h-[150px] object-cover"
+              />
+            </div>
+          </div>
+        </Parallax>
       </div>
+
+      <div className="my-12">
+        <Parallax blur={3} bgImage={beco} bgImageAlt="the mem" strength={300}>
+          <div className="h-[60vh] flex justify-center items-center w-full">
+            <div className="glass flex flex-col justify-center items-center gap-12 h-[70%] w-[70%]">
+              <p className=" text-center text-5xl md:text-6xl thermite text-white">
+                BECOME A MEMBER
+              </p>
+              <button className="thermite px-8 py-3 border-4 hover:bg-red-600 bg-transparent transition-bg duration-200 text-white border-white text-2xl md:text-4xl">
+                Apply <KeyboardArrowRightRoundedIcon />
+              </button>
+            </div>
+          </div>
+        </Parallax>
+      </div>
+
       <Footer />
     </div>
   );

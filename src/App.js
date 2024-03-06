@@ -9,8 +9,8 @@ import Home from "./components/Home";
 function App() {
   return (
     <>
-      <div className="bg-[#E9EAEC]">
-        <Home />
+      <div className="bg-[#E9EAEC] bgr">
+          <Home />
       </div>
     </>
   );

@@ -4,7 +4,10 @@
 
 body{
     background-color: #E9EAEC;
-    position: relative;
+}
+
+.bgr{
+  background-image: url("./logobg.png");
 }
 
 
@@ -235,3 +238,11 @@ a.selected::after {
     }
   }
   
+
+  .glass{
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 16px;
+      box-shadow: 0 4px 30px rgb(0, 0, 0);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(17px);
+  }
