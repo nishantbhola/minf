@@ -167,7 +167,7 @@ function Footer() {
         </footer>
       </Parallax>
       <div className="h-[5vh] flex justify-center items-center">
-        <p className="text-center text-[12px] thermite md:text-xl">
+        <p className="text-center text-[12px] thermite md:text-lg">
           {" "}
           Copyright © 2024 minf.com | Developed by : NISHANT BHOLA{" "}
         </p>
