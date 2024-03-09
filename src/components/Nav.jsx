@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import logo from "../logo.png";
 import logoin from "../logo-invert.png";
 
-function Nav({isOpen}) {
+function Nav({ isOpen }) {
   const [isSticky, setIsSticky] = useState(false);
 
   useEffect(() => {
@@ -34,19 +34,25 @@ function Nav({isOpen}) {
           }`}
         >
           <div
-            className={`relative md:flex hidden  ${isOpen ? "w-[80%]" : "w-[90%]"} items-center justify-evenly ${
-              isSticky ? "text-md" : "text-lg"
-            }`}
+            className={`relative md:flex hidden  ${
+              isOpen ? "w-[80%]" : "w-[90%]"
+            } items-center justify-evenly ${isSticky ? "text-md" : "text-lg"}`}
             style={{
               top: isSticky ? 0 : "-30%",
               transition: "all 0.3s ease-out",
               color: isSticky ? "white" : "black",
             }}
           >
-            <a href="/">EVENT</a>
-            <a href="/">RANKINGS</a>
-            <a href="/">NEWS</a>
-            <a href="/" className="selected">
+            <a href="/events" className="cusa">
+              EVENT
+            </a>
+            <a href="/rankings" className="cusa">
+              RANKINGS
+            </a>
+            <a href="/news" className="cusa">
+              NEWS
+            </a>
+            <a href="/" className="selected cusa">
               <img
                 src={isSticky ? logo : logoin}
                 className={
@@ -55,9 +61,15 @@ function Nav({isOpen}) {
                 alt="logo"
               />
             </a>
-            <a href="/">CONNECT</a>
-            <a href="/">ABOUT</a>
-            <a href="/">CONTACT</a>
+            <a href="/connect" className="cusa">
+              CONNECT
+            </a>
+            <a href="/about" className="cusa">
+              ABOUT
+            </a>
+            <a href="/contact" className="cusa">
+              CONTACT
+            </a>
           </div>
           <a
             href="/"
@@ -75,23 +87,6 @@ function Nav({isOpen}) {
             />
           </a>
         </nav>
-      </div>
-      <div
-        className={`h-[85vh] md:h-[92vh] md:px-5 px-2  ${
-          isSticky ? "mt-[0px]" : "mt-[-60px]"
-        }`}
-      >
-        <video
-          className="w-full h-full object-cover rounded-2xl"
-          muted
-          autoPlay
-          loop
-        >
-          <source
-            src="https://video.wixstatic.com/video/6587d4_bef08a61503346ea852f4402debea9d6/480p/mp4/file.mp4"
-            type="video/mp4"
-          />
-        </video>
       </div>
     </div>
   );

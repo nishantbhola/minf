@@ -65,7 +65,7 @@ body{
 }
 
 
-a {
+.cusa {
     cursor: pointer;
     position: relative;
     display: inline-block;
@@ -73,7 +73,7 @@ a {
 }
 
 
-a:after{
+.cusa:after{
     content: "";
     background-color: red;
     width: 0;
@@ -87,8 +87,8 @@ a:after{
 
 }
 
-a:hover:after,
-a.selected::after {
+.cusa:hover:after,
+.cusa.selected::after {
     width: 30%;
 }
 
@@ -245,4 +245,53 @@ a.selected::after {
       box-shadow: 0 4px 30px rgb(0, 0, 0);
       backdrop-filter: blur(14px);
       -webkit-backdrop-filter: blur(17px);
+      border: 1px solid #e7e7e7;
   }
+
+
+
+  /* CUSTOM BUTTON STYLE  */
+
+.button {
+  position: relative;
+  transition: 0.25s;
+  z-index: 1;
+  cursor: pointer;
+  text-decoration: none;
+  text-transform: uppercase;
+  background: black;
+  color: white;
+  border: 3px solid black;
+}
+
+.button:before,
+.button:after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+}
+
+.button:after {
+  height: 100%;
+  width: 0;
+  top: 0;
+  background: #E9EAEC;
+  transition: 0.15s;
+}
+
+.button:hover:after {
+  width: 100%;
+  color: black;
+}
+
+.button.--left:after {
+  left: 0;
+}
+
+.button.--right:after {
+  right: 0;
+}
+
+.button:hover{
+  color: black;
+}

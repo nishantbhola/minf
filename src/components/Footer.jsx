@@ -1,15 +1,16 @@
 import React from "react";
 import logo from "../logo.png";
 import { Parallax } from "react-parallax";
+import { Link } from "react-router-dom";
 
 function Footer() {
   return (
     <div>
       <Parallax
         blur={3}
-        bgImage="https://wallpaperset.com/w/full/0/3/8/67437.jpg"
+        bgImage="https://wallpapers.com/images/hd/plain-black-desktop-2560-x-1440-ugpl0479gu0vuwnl.jpg"
         bgImageAlt="the mem"
-        strength={1000}
+        strength={500}
       >
         <footer class="my-10">
           <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
@@ -32,43 +33,21 @@ function Footer() {
                   <h2 class="mb-6 text-xl thermite font-semibold text-gray-900 uppercase dark:text-white">
                     Quick Links
                   </h2>
-                  <ul class="text-gray-500 dark:text-gray-400 font-medium">
-                    <li class="mb-4">
-                      <a href="https://flowbite.com/" class="hover:underline">
-                        Home
-                      </a>
+                  <ul class="text-gray-500  font-medium">
+                    <li class="mb-4 hover:text-white">
+                      <Link to="/">Home</Link>
                     </li>
-                    <li class="mb-4">
-                      <a
-                        href="https://tailwindcss.com/"
-                        class="hover:underline"
-                      >
-                        Events
-                      </a>
+                    <li class="mb-4 hover:text-white">
+                      <Link to="/events">Events</Link>
                     </li>
-                    <li class="mb-4">
-                      <a
-                        href="https://tailwindcss.com/"
-                        class="hover:underline"
-                      >
-                        About
-                      </a>
+                    <li class="mb-4 hover:text-white">
+                      <Link to="/about">About</Link>
                     </li>
-                    <li class="mb-4">
-                      <a
-                        href="https://tailwindcss.com/"
-                        class="hover:underline"
-                      >
-                        Contact
-                      </a>
+                    <li class="mb-4 hover:text-white">
+                      <Link to="/contact">Contact</Link>
                     </li>
-                    <li class="mb-4">
-                      <a
-                        href="https://tailwindcss.com/"
-                        class="hover:underline"
-                      >
-                        Connect
-                      </a>
+                    <li class="mb-4 hover:text-white">
+                      <Link to="/connect">Connect</Link>
                     </li>
                   </ul>
                 </div>
@@ -77,21 +56,11 @@ function Footer() {
                     Follow us
                   </h2>
                   <ul class="text-gray-500 dark:text-gray-400 font-medium">
-                    <li class="mb-4">
-                      <a
-                        href="https://github.com/themesberg/flowbite"
-                        class="hover:underline "
-                      >
-                        Github
-                      </a>
+                    <li class="mb-4 hover:text-white">
+                      <a href="/">Github</a>
                     </li>
-                    <li>
-                      <a
-                        href="https://discord.gg/4eeurUVvTy"
-                        class="hover:underline"
-                      >
-                        Discord
-                      </a>
+                    <li class="mb-4 hover:text-white">
+                      <a href="/">Discord</a>
                     </li>
                   </ul>
                 </div>
@@ -99,16 +68,12 @@ function Footer() {
                   <h2 class="mb-6 text-xl font-semibold thermite text-gray-900 uppercase dark:text-white">
                     Legal
                   </h2>
-                  <ul class="text-gray-500 dark:text-gray-400 font-medium">
-                    <li class="mb-4">
-                      <a href="/" class="hover:underline">
-                        Privacy Policy
-                      </a>
+                  <ul class="text-gray-400 font-medium">
+                    <li class="mb-4 hover:text-white">
+                      <a href="/">Privacy Policy</a>
                     </li>
-                    <li>
-                      <a href="/" class="hover:underline">
-                        Terms &amp; Conditions
-                      </a>
+                    <li class="mb-4 hover:text-white">
+                      <a href="/">Terms &amp; Conditions</a>
                     </li>
                   </ul>
                 </div>
@@ -117,10 +82,7 @@ function Footer() {
             </div>
             <div class="flex items-center justify-center mt-8">
               <div class="flex justify-center gap-5">
-                <a
-                  href="/"
-                  class="text-gray-500 hover:text-gray-900 dark:hover:text-white"
-                >
+                <Link to="/" class="text-gray-500 hover:text-white">
                   <svg
                     class="w-8 h-8"
                     aria-hidden="true"
@@ -135,11 +97,8 @@ function Footer() {
                     />
                   </svg>
                   <span class="sr-only">Facebook page</span>
-                </a>
-                <a
-                  href="/"
-                  class="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5"
-                >
+                </Link>
+                <Link to="/" class="text-gray-500 hover:text-white ms-5">
                   <svg
                     class="w-8 h-8"
                     aria-hidden="true"
@@ -150,11 +109,8 @@ function Footer() {
                     <path d="M16.942 1.556a16.3 16.3 0 0 0-4.126-1.3 12.04 12.04 0 0 0-.529 1.1 15.175 15.175 0 0 0-4.573 0 11.585 11.585 0 0 0-.535-1.1 16.274 16.274 0 0 0-4.129 1.3A17.392 17.392 0 0 0 .182 13.218a15.785 15.785 0 0 0 4.963 2.521c.41-.564.773-1.16 1.084-1.785a10.63 10.63 0 0 1-1.706-.83c.143-.106.283-.217.418-.33a11.664 11.664 0 0 0 10.118 0c.137.113.277.224.418.33-.544.328-1.116.606-1.71.832a12.52 12.52 0 0 0 1.084 1.785 16.46 16.46 0 0 0 5.064-2.595 17.286 17.286 0 0 0-2.973-11.59ZM6.678 10.813a1.941 1.941 0 0 1-1.8-2.045 1.93 1.93 0 0 1 1.8-2.047 1.919 1.919 0 0 1 1.8 2.047 1.93 1.93 0 0 1-1.8 2.045Zm6.644 0a1.94 1.94 0 0 1-1.8-2.045 1.93 1.93 0 0 1 1.8-2.047 1.918 1.918 0 0 1 1.8 2.047 1.93 1.93 0 0 1-1.8 2.045Z" />
                   </svg>
                   <span class="sr-only">Discord community</span>
-                </a>
-                <a
-                  href="/"
-                  class="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5"
-                >
+                </Link>
+                <Link to="/" class="text-gray-500 hover:text-white ms-5">
                   <svg
                     class="w-8 h-8"
                     aria-hidden="true"
@@ -169,11 +125,8 @@ function Footer() {
                     />
                   </svg>
                   <span class="sr-only">Twitter page</span>
-                </a>
-                <a
-                  href="/"
-                  class="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5"
-                >
+                </Link>
+                <Link to="/" class="text-gray-500 hover:text-white ms-5">
                   <svg
                     class="w-8 h-8"
                     aria-hidden="true"
@@ -188,9 +141,9 @@ function Footer() {
                     />
                   </svg>
                   <span class="sr-only">GitHub account</span>
-                </a>
-                <a
-                  href="/"
+                </Link>
+                <Link
+                  to="/"
                   class="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5"
                 >
                   <svg
@@ -207,16 +160,16 @@ function Footer() {
                     />
                   </svg>
                   <span class="sr-only">Dribbble account</span>
-                </a>
+                </Link>
               </div>
             </div>
           </div>
         </footer>
       </Parallax>
-      <div className="h-[10vh] flex justify-center items-center">
-        <p className="text-center thermite text-xl">
+      <div className="h-[5vh] flex justify-center items-center">
+        <p className="text-center text-[12px] thermite md:text-xl">
           {" "}
-          Copyright © 2024 minf.com | Develaped by : NISHANT BHOLA{" "}
+          Copyright © 2024 minf.com | Developed by : NISHANT BHOLA{" "}
         </p>
       </div>
     </div>
