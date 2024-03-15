@@ -10,15 +10,17 @@ import Event from "./components/pages/Event";
 import Ranking from "./components/pages/Ranking";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import FeaturedUpdate from "./components/pages/FeaturedUpdate";
+import FeatureupdatePost from "./components/pages/FeatureupdatePost";
 
 function App() {
   return (
     <>
       <Router>
-        <div className="bg-[#E9EAEC] bgr">
+        <div className="bgr bg-[#E9EAEC]">
           <MainNav />
           <Routes>
-            <Route path="/" element={<Home />} />
+            <Route path="/" index element={<Home />} />
+            <Route path="/featureupdatepost" element={<FeatureupdatePost />} />
             <Route path="about" element={<About />} />
             <Route path="featureupdate" element={<FeaturedUpdate />} />
             <Route path="connect" element={<Connect />} />

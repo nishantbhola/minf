@@ -30,7 +30,7 @@ function Footer() {
               <hr className="w-[90%] md:hidden block mb-12 mx-auto" />
               <div class="grid grid-cols-3 gap-8 sm:gap-6 sm:grid-cols-3">
                 <div className="text-center">
-                  <h2 class="mb-6 text-xl thermite font-semibold text-white uppercase dark:text-white">
+                  <h2 class="mb-6 text-xl thermite font-semibold text-gray-900 uppercase dark:text-white">
                     Quick Links
                   </h2>
                   <ul class="text-gray-500  font-medium">
@@ -52,7 +52,7 @@ function Footer() {
                   </ul>
                 </div>
                 <div className="text-center">
-                  <h2 class="mb-6 text-xl thermite font-semibold  text-white uppercase dark:text-white">
+                  <h2 class="mb-6 text-xl thermite font-semibold  text-gray-900 uppercase dark:text-white">
                     Follow us
                   </h2>
                   <ul class="text-gray-500 dark:text-gray-400 font-medium">
@@ -65,7 +65,7 @@ function Footer() {
                   </ul>
                 </div>
                 <div className="text-center">
-                  <h2 class="mb-6 text-xl font-semibold thermite text-white uppercase dark:text-white">
+                  <h2 class="mb-6 text-xl font-semibold thermite text-gray-900 uppercase dark:text-white">
                     Legal
                   </h2>
                   <ul class="text-gray-400 font-medium">
