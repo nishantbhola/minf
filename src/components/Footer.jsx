@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "../logo.png";
+// import logo from "../logo.png";
 import { Parallax } from "react-parallax";
 import { Link } from "react-router-dom";
 
@@ -18,7 +18,7 @@ function Footer() {
               <div class="mb-8 flex flex-col justify-center items-center gap-2 md:mb-0">
                 <a href="/" class="">
                   <img
-                    src={logo}
+                    src="https://minf-minf.s3.ap-south-1.amazonaws.com/BANNER+(1).png"
                     class="h-[100px] mix-blend-difference"
                     alt="FlowBite Logo"
                   />
