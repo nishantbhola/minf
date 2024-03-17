@@ -81,7 +81,7 @@ function Nav({ isOpen }) {
           <a
             href="/"
             className="md:hidden block flex justify-center items-center gap-3"
-            style={{ top: isSticky ? 0 : "-12%" }}
+            style={{ top: isSticky ? 0 : "[-40px]" }}
           >
 {/*             <img
               src={logo}
@@ -100,7 +100,7 @@ function Nav({ isOpen }) {
                   ? " md:h-[55px] object-cover h-[45px]"
                   : " md:h-[75px] object-cover h-[55px]"
               }
-              alt="logo" /> <span clasName="text-2xl thermite">INDIA</span>
+              alt="logo" /> <span clasName="text-4xl thermite">INDIA</span>
             
           </a>
         </nav>
