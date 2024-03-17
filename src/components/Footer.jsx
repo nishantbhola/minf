@@ -19,12 +19,9 @@ function Footer() {
                 <a href="/" class="">
                   <img
                     src="https://minf-minf.s3.ap-south-1.amazonaws.com/BANNER+(1).png"
-                    class="h-[100px] mix-blend-difference"
+                    class="h-[200px] mix-blend-difference"
                     alt="FlowBite Logo"
                   />
-                </a>
-                <a href="/" class=" thermite text-white">
-                  minf.com
                 </a>
               </div>
               <hr className="w-[90%] md:hidden block mb-12 mx-auto" />
