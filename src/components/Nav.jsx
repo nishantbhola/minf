@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import logo from "../logo.png";
-import logoin from "../logo-invert.png";
+// import logo from "../logo.png";
+// import logoin from "../logo-invert.png";
 
 function Nav({ isOpen }) {
   const [isSticky, setIsSticky] = useState(false);
@@ -100,7 +100,7 @@ function Nav({ isOpen }) {
                   ? " md:h-[55px] object-cover h-[45px]"
                   : " md:h-[75px] object-cover h-[55px]"
               }
-              alt="logo" */}
+              alt="logo" />
             
           </a>
         </nav>
