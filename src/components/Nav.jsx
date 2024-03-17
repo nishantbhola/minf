@@ -52,7 +52,7 @@ function Nav({ isOpen }) {
             <a href="/news" className="cusa">
               NEWS
             </a>
-            <a href="/" className="selected cusa">
+            <a href="/" className="cusa">
 {/*               <img
                 src={isSticky ? logo : logoin}
                 className={
