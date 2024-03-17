@@ -53,13 +53,20 @@ function Nav({ isOpen }) {
               NEWS
             </a>
             <a href="/" className="selected cusa">
-              <img
+{/*               <img
                 src={isSticky ? logo : logoin}
                 className={
                   isSticky ? "h-[55px] object-cover" : "h-[75px] object-cover"
                 }
                 alt="logo"
-              />
+              /> */}
+              <img
+                src="https://minf-minf.s3.ap-south-1.amazonaws.com/BANNER+(1).png"
+                className={
+                  isSticky ? "h-[55px] object-cover" : "h-[75px] object-cover"
+                }
+                alt="logo"
+              /> 
             </a>
             <a href="/connect" className="cusa">
               CONNECT
@@ -76,7 +83,7 @@ function Nav({ isOpen }) {
             className="selected md:hidden block"
             style={{ top: isSticky ? 0 : "-12%" }}
           >
-            <img
+{/*             <img
               src={logo}
               className={
                 isSticky
@@ -84,7 +91,17 @@ function Nav({ isOpen }) {
                   : "colorburn md:h-[75px] object-cover h-[55px]"
               }
               alt="logo"
-            />
+            /> */}
+
+            <img
+              src="https://minf-minf.s3.ap-south-1.amazonaws.com/BANNER+(1).png"
+              className={
+                isSticky
+                  ? " md:h-[55px] object-cover h-[45px]"
+                  : " md:h-[75px] object-cover h-[55px]"
+              }
+              alt="logo" */}
+            
           </a>
         </nav>
       </div>
