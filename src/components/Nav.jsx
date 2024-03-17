@@ -80,7 +80,7 @@ function Nav({ isOpen }) {
           </div>
           <a
             href="/"
-            className="md:hidden block flex justify-center items-center gap-3"
+            className="md:hidden block flex justify-center items-center gap-3 text-2xl"
             style={{ top: isSticky ? 0 : "[-40px]" }}
           >
 {/*             <img
