@@ -100,7 +100,7 @@ function Nav({ isOpen }) {
                   ? " md:h-[55px] object-cover h-[45px]"
                   : " md:h-[75px] object-cover h-[55px]"
               }
-              alt="logo" />
+              alt="logo" /> <span clasName="text-xl thermite">INDIA</span>
             
           </a>
         </nav>
