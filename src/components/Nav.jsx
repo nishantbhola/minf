@@ -61,9 +61,9 @@ function Nav({ isOpen }) {
                 alt="logo"
               /> */}
               <img
-                src="https://minf-minf.s3.ap-south-1.amazonaws.com/BANNER+(1).png"
+                src={isSticky ? "https://minf-minf.s3.ap-south-1.amazonaws.com/wbc-in.png" : "https://minf-minf.s3.ap-south-1.amazonaws.com/wbc.png"}
                 className={
-                  isSticky ? "h-[55px] object-cover" : "h-[75px] object-cover"
+                  isSticky ? "h-[55px] object-cover" : "h-[65px] object-cover"
                 }
                 alt="logo"
               /> 
@@ -80,8 +80,8 @@ function Nav({ isOpen }) {
           </div>
           <a
             href="/"
-            className="md:hidden block flex justify-center items-center gap-3 text-2xl"
-            style={{ top: isSticky ? 0 : "[-40px]" }}
+            className={`md:hidden block flex justify-center items-center gap-3 text-2xl ${isSticky ? "text-white" : "text-black"}`}
+            style={{ marginTop: isSticky ? 0 : "-7%" }}
           >
 {/*             <img
               src={logo}
@@ -94,14 +94,13 @@ function Nav({ isOpen }) {
             /> */}
 
             <img
-              src="https://minf-minf.s3.ap-south-1.amazonaws.com/BANNER+(1).png"
-              className={
+               src={isSticky ? "https://minf-minf.s3.ap-south-1.amazonaws.com/wbc-in.png" : "https://minf-minf.s3.ap-south-1.amazonaws.com/wbc.png"}
+               className={
                 isSticky
-                  ? " md:h-[55px] object-cover h-[45px]"
-                  : " md:h-[75px] object-cover h-[55px]"
+                  ? "object-cover h-[65px]"
+                  : "object-cover h-[55px]"
               }
-              alt="logo" /> <span clasName="text-4xl thermite">INDIA</span>
-            
+              alt="logo" />
           </a>
         </nav>
       </div>

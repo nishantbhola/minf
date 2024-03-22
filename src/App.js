@@ -11,6 +11,7 @@ import Ranking from "./components/pages/Ranking";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import FeaturedUpdate from "./components/pages/FeaturedUpdate";
 import FeatureupdatePost from "./components/pages/FeatureupdatePost";
+import RenderNews from "./components/RenderNews";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           <Routes>
             <Route path="/" index element={<Home />} />
             <Route path="/featureupdatepost" element={<FeatureupdatePost />} />
+            <Route path="/render" element={<RenderNews />} />
             <Route path="about" element={<About />} />
             <Route path="featureupdate" element={<FeaturedUpdate />} />
             <Route path="connect" element={<Connect />} />
