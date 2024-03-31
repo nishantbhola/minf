@@ -22,7 +22,7 @@ function Feeds() {
   }, []);
 
   return (
-    <div className="h-[70vh] w-full grid grid-flow-col gap-3 overflow-x-scroll mb-12">
+    <div className="h-full w-full grid grid-flow-col gap-3 overflow-x-scroll mb-12">
       <div
         className={`h-full md:w-[90px] md:mr-8 w-[100px] text-center flex gap-1 text-gray-700 text-xl md:text-3xl justify-center items-center thermite `}
       >

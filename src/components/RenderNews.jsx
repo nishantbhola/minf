@@ -1,13 +1,6 @@
 import { Parallax } from "react-parallax";
 
 function RenderNews(){
-
-    const images = [
-        { src: 'image1.jpg', alt: 'Image 1' },
-        { src: 'image2.jpg', alt: 'Image 2' },
-        { src: 'image3.jpg', alt: 'Image 3' },
-        // Add more images here
-      ];
     
     return (
         <div>
@@ -36,13 +29,14 @@ function RenderNews(){
             <div>
                 <div className="text-center text-4xl thermite text-[#183557] mb-[30px]">title</div>
                 <div className="text-center text-4xl thermite text-[#183557] mb-[30px]">Descrption to some of the description </div>
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-                {images.map((image, index) => (
-                    <div key={index} className="rounded-lg border-2 border-black overflow-hidden shadow-lg">
-                    <img src={image.src} alt={image.alt} className="w-full h-full object-cover" />
-                    </div>
-                ))}
-                </div>
+                <div className="container mx-auto px-5 grid grid-cols-3 lg:grid-cols-4 gap-4">
+    {[1,2,3,4,5,6,4,5,6,8].map((image, index) => (
+        <div key={index} className="rounded-lg border-2 border-black overflow-hidden shadow-lg">
+            <img src={`https://stimg.cardekho.com/images/carexteriorimages/930x620/Maruti/Jimny/6182/1686117643111/front-left-side-47.jpg?impolicy=resize&imwidth=420`} alt={"image"} className="w-full h-auto object-cover" />
+        </div>
+    ))}
+</div>
+
             </div>
         </div>
     )

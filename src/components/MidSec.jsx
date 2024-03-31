@@ -12,7 +12,7 @@ function MidSec() {
           />
           <div className="text-justify pb-2">
             <div className="grid px-2">
-              <p className="text-xl text-center pt-3 thermite leading-0 text-[#183557]">
+              <p className="text-xl text-center pt-3 protest leading-0 text-[#183557]">
                 {" "}
                 Road To International
               </p>
@@ -30,7 +30,7 @@ function MidSec() {
           />
           <div className="text-justify pb-2">
             <div className="grid px-2">
-              <p className="text-xl text-center pt-3 thermite leading-0 text-[#183557]">
+              <p className="text-xl text-center pt-3 protest leading-0 text-[#183557]">
                 {" "}
                 Road To International
               </p>
@@ -48,7 +48,7 @@ function MidSec() {
           />
           <div className="text-justify pb-2">
             <div className="grid px-2">
-              <p className="text-xl text-center pt-3 thermite leading-0 text-[#183557]">
+              <p className="text-xl text-center pt-3 protest leading-0 text-[#183557]">
                 {" "}
                 Road To International
               </p>
@@ -66,7 +66,7 @@ function MidSec() {
           />
           <div className="text-justify pb-2">
             <div className="grid px-2">
-              <p className="text-xl text-center pt-3 thermite leading-0 text-[#183557]">
+              <p className="text-xl text-center pt-3 protest leading-0 text-[#183557]">
                 {" "}
                 Road To International
               </p>

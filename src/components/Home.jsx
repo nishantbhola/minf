@@ -50,7 +50,7 @@ function Home() {
         <div className="container mx-auto px-5">
           <div>
             <div className="mb-12 flex justify-between border-b-2 border-gray-400">
-              <p className="thermite pb-2 text-3xl text-gray-700">Featured</p>
+              <p className="protest pb-2 text-3xl text-gray-700">Featured</p>
               <p className="thermite hidden cursor-pointer text-lg text-gray-500 md:block">
                 <a href="/featureupdate">view all</a>{" "}
                 <KeyboardArrowRightRoundedIcon />
@@ -69,7 +69,7 @@ function Home() {
           </div>
           <div>
             <div className="mb-12 flex justify-between border-b-2 border-gray-400">
-              <p className="thermite pb-2 text-3xl text-gray-700">Events</p>
+              <p className="protest pb-2 text-3xl text-gray-700">Events</p>
               <p className="thermite hidden cursor-pointer text-lg text-gray-500 md:block">
                 <a href="/events">view all</a> <KeyboardArrowRightRoundedIcon />
               </p>
@@ -84,10 +84,10 @@ function Home() {
         </div>
 
         <Parallax
-          blur={7}
+          blur={3}
           bgImage="https://i.pinimg.com/originals/ca/7d/2f/ca7d2fd4c3ed6ebac88e5ff2a90810ce.jpg"
           bgImageAlt="the collab"
-          strength={200}
+          strength={50}
         >
           <div className=" flex h-[300px] w-full flex-col items-center justify-center md:h-[500px]">
             <p className="thermite text-center text-2xl text-white opacity-80 md:text-4xl">
@@ -115,13 +115,13 @@ function Home() {
       </div>
 
       <div className="my-12">
-        <Parallax blur={3} bgImage={beco} bgImageAlt="the mem" strength={300}>
+        <Parallax blur={3} bgImage={beco} bgImageAlt="the mem" strength={50}>
           <div className="flex h-[60vh] w-full items-center justify-center">
             <div className="glass flex h-[70%] w-[70%] flex-col items-center justify-center gap-12">
-              <p className=" thermite text-center text-3xl text-white md:text-6xl">
+              <p className=" protest text-center text-3xl text-white md:text-6xl">
                 BECOME A MEMBER
               </p>
-              <button className="thermite transition-bg border-4 border-white bg-transparent px-8 py-3 text-2xl text-white duration-200 hover:bg-red-600 md:text-4xl">
+              <button className="protest transition-bg border-4 border-white bg-transparent px-8 py-3 text-2xl text-white duration-200 hover:bg-red-600 md:text-4xl">
                 Apply <KeyboardArrowRightRoundedIcon />
               </button>
             </div>

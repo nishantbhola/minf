@@ -22,10 +22,10 @@ export default function Event() {
         }}
       >
         <Parallax
-          blur={3}
+          blur={2}
           bgImage="https://wbcboxing.com/wp-content/uploads/leppage_Vidal_WBC_Heavy.jpg"
           bgImageAlt="the mem"
-          strength={500}
+          strength={50}
         >
           <div className="flex h-[60vh] justify-center rounded-lg items-center">
             <p className="text-6xl text-white tracking-widest mt-[60px] thermite pb-2">

@@ -52,7 +52,7 @@ function Nav({ isOpen }) {
             <a href="/news" className="cusa">
               NEWS
             </a>
-            <a href="/" className="cusa">
+            <a href="/" className="cusa selected">
 {/*               <img
                 src={isSticky ? logo : logoin}
                 className={
@@ -98,7 +98,7 @@ function Nav({ isOpen }) {
                className={
                 isSticky
                   ? "object-cover h-[65px]"
-                  : "object-cover h-[55px]"
+                  : "object-cover h-[45px]"
               }
               alt="logo" />
           </a>
