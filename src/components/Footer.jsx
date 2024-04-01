@@ -1,26 +1,30 @@
 import React from "react";
 // import logo from "../logo.png";
-import { Parallax } from "react-parallax";
-import { Link } from "react-router-dom";
+// import { Parallax } from "react-parallax";
 
 function Footer() {
+  const image = "url('https://wallpapercave.com/wp/wp11325370.jpg')"
   return (
-    <div>
-      <Parallax
+    <div className="mt-10 ">
+      {/* <Parallax
         blur={3}
         bgImage="https://wallpapers.com/images/hd/plain-black-desktop-2560-x-1440-ugpl0479gu0vuwnl.jpg"
         bgImageAlt="the mem"
         strength={500}
-      >
-        <footer class="my-10">
+      > */}
+      <div
+          className="bg-black"
+          style={{backgroundImage: image, backgroundSize: "cover",}}
+        >
+        <footer class="">
           <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
             <div class="md:flex md:justify-around">
               <div class="mb-8 flex flex-col justify-center items-center gap-2 md:mb-0">
                 <a href="/" class="">
                   <img
                     src="https://minf-minf.s3.ap-south-1.amazonaws.com/BANNER+(1).png"
-                    class="h-[200px] mix-blend-difference"
-                    alt="FlowBite Logo"
+                    class="h-[200px]"
+                    alt="WBCAMTI"
                   />
                 </a>
               </div>
@@ -32,19 +36,19 @@ function Footer() {
                   </h2>
                   <ul class="text-gray-500  font-medium">
                     <li class="mb-4 hover:text-white">
-                      <Link to="/">Home</Link>
+                      <a href="/">Home</a>
                     </li>
                     <li class="mb-4 hover:text-white">
-                      <Link to="/events">Events</Link>
+                      <a href="/events">Events</a>
                     </li>
                     <li class="mb-4 hover:text-white">
-                      <Link to="/about">About</Link>
+                      <a href="/about">About</a>
                     </li>
                     <li class="mb-4 hover:text-white">
-                      <Link to="/contact">Contact</Link>
+                      <a href="/contact">Contact</a>
                     </li>
                     <li class="mb-4 hover:text-white">
-                      <Link to="/connect">Connect</Link>
+                      <a href="/connect">Connect</a>
                     </li>
                   </ul>
                 </div>
@@ -79,7 +83,7 @@ function Footer() {
             </div>
             <div class="flex items-center justify-center mt-8">
               <div class="flex justify-center gap-5">
-                <Link to="/" class="text-gray-500 hover:text-white">
+                <a href="/" class="text-gray-500 hover:text-white">
                   <svg
                     class="w-8 h-8"
                     aria-hidden="true"
@@ -94,8 +98,8 @@ function Footer() {
                     />
                   </svg>
                   <span class="sr-only">Facebook page</span>
-                </Link>
-                <Link to="/" class="text-gray-500 hover:text-white ms-5">
+                </a>
+                <a href="/" class="text-gray-500 hover:text-white ms-5">
                   <svg
                     class="w-8 h-8"
                     aria-hidden="true"
@@ -106,8 +110,8 @@ function Footer() {
                     <path d="M16.942 1.556a16.3 16.3 0 0 0-4.126-1.3 12.04 12.04 0 0 0-.529 1.1 15.175 15.175 0 0 0-4.573 0 11.585 11.585 0 0 0-.535-1.1 16.274 16.274 0 0 0-4.129 1.3A17.392 17.392 0 0 0 .182 13.218a15.785 15.785 0 0 0 4.963 2.521c.41-.564.773-1.16 1.084-1.785a10.63 10.63 0 0 1-1.706-.83c.143-.106.283-.217.418-.33a11.664 11.664 0 0 0 10.118 0c.137.113.277.224.418.33-.544.328-1.116.606-1.71.832a12.52 12.52 0 0 0 1.084 1.785 16.46 16.46 0 0 0 5.064-2.595 17.286 17.286 0 0 0-2.973-11.59ZM6.678 10.813a1.941 1.941 0 0 1-1.8-2.045 1.93 1.93 0 0 1 1.8-2.047 1.919 1.919 0 0 1 1.8 2.047 1.93 1.93 0 0 1-1.8 2.045Zm6.644 0a1.94 1.94 0 0 1-1.8-2.045 1.93 1.93 0 0 1 1.8-2.047 1.918 1.918 0 0 1 1.8 2.047 1.93 1.93 0 0 1-1.8 2.045Z" />
                   </svg>
                   <span class="sr-only">Discord community</span>
-                </Link>
-                <Link to="/" class="text-gray-500 hover:text-white ms-5">
+                </a>
+                <a href="/" class="text-gray-500 hover:text-white ms-5">
                   <svg
                     class="w-8 h-8"
                     aria-hidden="true"
@@ -122,8 +126,8 @@ function Footer() {
                     />
                   </svg>
                   <span class="sr-only">Twitter page</span>
-                </Link>
-                <Link to="/" class="text-gray-500 hover:text-white ms-5">
+                </a>
+                <a href="/" class="text-gray-500 hover:text-white ms-5">
                   <svg
                     class="w-8 h-8"
                     aria-hidden="true"
@@ -138,9 +142,9 @@ function Footer() {
                     />
                   </svg>
                   <span class="sr-only">GitHub account</span>
-                </Link>
-                <Link
-                  to="/"
+                </a>
+                <a
+                  href="/"
                   class="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5"
                 >
                   <svg
@@ -157,12 +161,13 @@ function Footer() {
                     />
                   </svg>
                   <span class="sr-only">Dribbble account</span>
-                </Link>
+                </a>
               </div>
             </div>
           </div>
         </footer>
-      </Parallax>
+      {/* </Parallax> */}
+      </div>
       <div className="h-[6vh] md:h-[8vh] flex justify-center items-center">
         <p className="text-center text-[10px] thermite md:text-lg">
           {" "}

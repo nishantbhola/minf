@@ -16,12 +16,12 @@ body{
 
 @font-face {
     font-family: thermite;
-    src: url(./FontsFree-Net-Thermite.ttf);
+    src: url(./FontsFree-Net-Thermite.woff2);
 }
 
 @font-face {
   font-family: inter;
-  src: url(./FontsFree-Inter.ttf);
+  src: url(./FontsFree-Inter.woff2);
 }
 
 .interf{

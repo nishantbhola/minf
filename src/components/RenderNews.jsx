@@ -1,45 +1,38 @@
-// import { Parallax } from "react-parallax";
+import React from "react";
+import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
+import LazyLoad from "react-lazyload";
 
-// function RenderNews(){
-    
-//     return (
-//         <div>
-//             <div
-//                 className="mt-[-60px] mx-5 mb-12 rounded-lg"
-//                 style={{
-//                 backgroundImage:
-//                     "url('https://wbcboxing.com/wp-content/uploads/leppage_Vidal_WBC_Heavy.jpg')",
-//                 backgroundSize: "cover",
-//                 backgroundPosition: "center",
-//                 }}
-//             >
-//                 <Parallax
-//                 blur={3}
-//                 bgImage="https://wbcboxing.com/wp-content/uploads/leppage_Vidal_WBC_Heavy.jpg"
-//                 bgImageAlt="the mem"
-//                 strength={500}
-//                 >
-//                 <div className="flex h-[70vh] justify-center rounded-lg items-center">
-//                     <p className="text-6xl text-white tracking-widest mt-[60px] thermite pb-2">
-//                     UPCOMING EVENTS
-//                     </p>
-//                 </div>
-//                 </Parallax>
-//             </div>
-//             <div>
-//                 <div className="text-center text-4xl thermite text-[#183557] mb-[30px]">title</div>
-//                 <div className="text-center text-4xl thermite text-[#183557] mb-[30px]">Descrption to some of the description </div>
-//                 <div className="container mx-auto px-5 grid grid-cols-3 lg:grid-cols-4 gap-4">
-//     {[1,2,3,4,5,6,4,5,6,8].map((image, index) => (
-//         <div key={index} className="rounded-lg border-2 border-black overflow-hidden shadow-lg">
-//             <img src={`https://stimg.cardekho.com/images/carexteriorimages/930x620/Maruti/Jimny/6182/1686117643111/front-left-side-47.jpg?impolicy=resize&imwidth=420`} alt={"image"} className="w-full h-auto object-cover" />
-//         </div>
-//     ))}
-// </div>
+const RenderNews = () => {
+    const image = "url('https://minf-minf.s3.ap-south-1.amazonaws.com/89137e1c-98d8-4217-a408-e5bc4c4e1c0e.jpg')"
+  const items = Array.from({ length: 20 }).map((_, index) => (
+    <LazyLoad key={index} height={200}>
+      <img
+        alt=""
+        src={`https://picsum.photos/200/${Math.floor(Math.random() * (300 - 200 + 1) + 200)}`}
+        style={{ width: "100%", borderRadius: "" }}
+      />
+    </LazyLoad>
+  ));
 
-//             </div>
-//         </div>
-//     )
-// }
+  return (
+    <div>
+        <div
+            className="mt-[-60px] mx-5 mb-12 rounded-lg "
+            style={{backgroundImage: image, backgroundSize: "cover",}}
+            >
+                <div className="flex md:h-[75vh] h-[70vh] justify-center rounded-lg items-center bg-[rgba(0,0,0,0.7)]" >
+                    <p className="px-8 md:text-8xl text-5xl text-center text-white tracking-widest mt-[80px] interf pb-2">
+                    Rendered News 
+                    </p>
+                </div>
+            </div>
+        <div className="container w-[70%] mx-auto">
+        <ResponsiveMasonry columnsCountBreakPoints={{ 300: 2, 500: 3, 700: 4, 900: 5 }}>
+            <Masonry gutter="10px">{items}</Masonry>
+        </ResponsiveMasonry>
+        </div>
+    </div>
+  );
+};
 
-// export default RenderNews;
+export default RenderNews;

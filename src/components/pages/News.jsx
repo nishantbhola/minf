@@ -10,7 +10,7 @@ function News() {
           style={{backgroundImage: image, backgroundSize: "cover", backgroundPosition: "center"}}
         >
               <div className="flex md:h-[65vh] h-[50vh] justify-center rounded-lg items-center bg-[rgba(0,0,0,0.7)]" >
-                <p className="px-8 md:text-6xl text-5xl text-center text-white tracking-widest mt-[80px] interf pb-2">
+                <p className="px-8 md:text-6xl text-3xl text-center text-white tracking-widest mt-[80px] interf pb-2">
                 NEWS, FEEDS, ANNOUNCEMENT ...
                 </p>
               </div>
