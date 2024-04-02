@@ -6,7 +6,7 @@ const FileUpload = () => {
   const [description, setDescription] = useState("");
   const [upload, setUpload] = useState("");
   const [coverImage, setCoverImage] = useState(null);
-  const [images, setImages] = useState([]);
+  const [images, setImages] = useState([]); 
   const [message, setMessage] = useState("");
 
   const handleTitleChange = (event) => {
@@ -43,7 +43,7 @@ const FileUpload = () => {
 
     try {
       const response = await axios.post(
-        "http://localhost:3000/upload",
+        "https://successful-yoke-lion.cyclic.app/upload",
         formData,
         {
           headers: {

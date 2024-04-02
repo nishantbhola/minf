@@ -23,7 +23,7 @@ function App() {
           <MainNav />
           <Routes>
             <Route path="/" index element={<Home />} />
-            <Route path="/featureupdatepost" element={<FeatureupdatePost />} />
+            <Route path="/fupost" element={<FeatureupdatePost />} />
             <Route path="/render" element={<RenderNews />} />
             <Route path="about" element={<About />} />
             <Route path="featureupdate" element={<FeaturedUpdate />} />

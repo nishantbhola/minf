@@ -23,8 +23,8 @@ function  ProgressBar(){
 
 
     return(
-        <div className="fixed top-0 right-0 h-full w-[4px] z-50 bg-transparent">
-            <div className="h-full bg-red-600" style={{height: progressWidth +"%" }}>
+        <div className="fixed top-0 right-0 w-full h-[4px] z-50 bg-transparent">
+            <div className="h-full bg-red-600" style={{width: progressWidth +"%" }}>
 
             </div>
         </div>
