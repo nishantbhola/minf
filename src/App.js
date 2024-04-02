@@ -12,12 +12,14 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import FeaturedUpdate from "./components/pages/FeaturedUpdate";
 import FeatureupdatePost from "./components/pages/FeatureupdatePost";
 import RenderNews from "./components/RenderNews";
+import ProgressBar from "./components/ProgressBar";
 
 function App() {
   return (
     <>
       <Router>
         <div className="bgr bg-[#E9EAEC]">
+          <ProgressBar/>
           <MainNav />
           <Routes>
             <Route path="/" index element={<Home />} />

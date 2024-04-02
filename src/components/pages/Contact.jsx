@@ -36,7 +36,7 @@ const Contact = () => {
 
         <div>
           <p className="text-5xl text-center interf text-gray-800 mb-[30px] border-b-2 border-gray-800 pb-[10px]">Contact Us</p>
-          <p className=" text-xl text-center text-gray-800 protest">Do you have a question, comment, concern, suggestion or news tip to pass along to <span className="text-red-600 text-xl">WBC MUAYTHAI INDIA</span> ?</p>
+          <p className=" text-xl text-center text-gray-800 protest">Do you have a question, comment, concern, suggestion or news tip to pass along to <span className="text-red-600 text-xl">WBC AMATEUR MUAYTHAI INDIA</span> ?</p>
           <p className=" mt-5 text-2xl text-center text-gray-800 protest">Send us a Message</p>
           <div className=" w-full my-3  rounded-lg">
 
