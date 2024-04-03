@@ -13,6 +13,7 @@ import FeaturedUpdate from "./components/pages/FeaturedUpdate";
 import FeatureupdatePost from "./components/pages/FeatureupdatePost";
 import RenderNews from "./components/RenderNews";
 import ProgressBar from "./components/ProgressBar";
+import JoinWBCAMTI from "./components/pages/JoinWBCAMTI";
 
 function App() {
   return (
@@ -23,8 +24,8 @@ function App() {
           <MainNav />
           <Routes>
             <Route path="/" index element={<Home />} />
-            <Route path="/fupost" element={<FeatureupdatePost />} />
-            <Route path="/render" element={<RenderNews />} />
+            <Route path="fupost" element={<FeatureupdatePost />} />
+            <Route path="render" element={<RenderNews />} />
             <Route path="about" element={<About />} />
             <Route path="featureupdate" element={<FeaturedUpdate />} />
             <Route path="connect" element={<Connect />} />
@@ -32,6 +33,7 @@ function App() {
             <Route path="events" element={<Event />} />
             <Route path="news" element={<News />} />
             <Route path="rankings" element={<Ranking />} />
+            <Route path="jnwbcamti" element={<JoinWBCAMTI />} />
           </Routes>
           <Footer />
         </div>

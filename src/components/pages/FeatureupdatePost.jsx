@@ -1,5 +1,8 @@
 import React, { useState } from "react";
 import axios from "axios";
+import { ButtonLeft } from "../Button";
+import UploadRoundedIcon from '@mui/icons-material/UploadRounded';
+
 
 const FileUpload = () => {
   const [title, setTitle] = useState("");
@@ -51,8 +54,12 @@ const FileUpload = () => {
           },
         }
       );
-
-      setMessage(response.message);
+      setTitle("");
+      setDescription("");
+      setUpload("");
+      setCoverImage(null);
+      setImages([]);
+      setMessage(response.data.message);
     } catch (error) {
       console.error("Error:", error);
       setMessage("Error occurred during upload.");
@@ -60,53 +67,55 @@ const FileUpload = () => {
   };
 
   return (
-    <div>
-      <h1>File Upload</h1>
-      <form onSubmit={handleSubmit}>
-        <label htmlFor="title">Upload to:</label>
+    <div className="conatiner mx-auto w-[90%] md:w-[50%]">
+      <h1 className="mt-12 text-center text-3xl interf mt-2">File Upload</h1>
+      <form onSubmit={handleSubmit} className="mx-auto">
+        <label htmlFor="title" className="interf text-xl text-gray-600 ">Upload to:</label><br/>
         <select
+        className="bg-transparent border-2 w-full mt-1 mb-4 border-gray-500 p-1 outline-none"
           type="text"
           name="upload"
           id="upload"
           value={upload}
           onChange={handleUpload}
+          placeholder="Select where to upload"
         >
           <option value=""></option>
           <option value="FeaturedNews">Featured</option>
           <option value="events">event</option>
         </select>
-        <br />
-        <label htmlFor="title">Title:</label>
+        <label htmlFor="title" className="interf text-xl text-gray-600 ">Title:</label><br/>
         <input
+          className="bg-transparent border-2 w-full mt-1 mb-4 border-gray-500 p-1 outline-none"
           type="text"
           name="title"
           id="title"
           value={title}
           onChange={handleTitleChange}
         />
-        <br />
 
-        <label htmlFor="description">Description:</label>
+        <label htmlFor="description" className="interf text-xl text-gray-600 ">Description:</label><br/>
         <textarea
+          className="bg-transparent border-2 w-full mt-1 mb-4 border-gray-500 p-1 outline-none"
           name="description"
           id="description"
           value={description}
           onChange={handleDescriptionChange}
         />
-        <br />
 
-        <label htmlFor="coverImage">Cover Image:</label>
+        <label htmlFor="coverImage" className=" cursor-pointer interf text-xl text-gray-600 w-full text-center py-8 border-gray-500 border-2 block">Cover Image <UploadRoundedIcon fontSize="large" color="action"/>
         <input
+          className=" hidden bg-transparent border-2 rounded-md w-full mt-1 mb-4 border-gray-500 p-1 outline-none"
           type="file"
           name="coverImage"
           id="coverImage"
           accept="image/*"
           onChange={handleCoverImageChange}
-        />
-        <br />
+        /></label><br/>
 
-        <label htmlFor="images">Images (up to 3):</label>
+        <label htmlFor="images" className=" cursor-pointer interf text-xl text-gray-600 w-full text-center py-8 border-gray-500 border-2 block">Images <UploadRoundedIcon fontSize="large" color="action"/>
         <input
+          className=" hidden bg-transparent border-2 rounded-md w-full mt-1 mb-4 border-gray-500 p-1 outline-none"
           type="file"
           name="images"
           id="images"
@@ -114,9 +123,13 @@ const FileUpload = () => {
           accept="image/*"
           onChange={handleImagesChange}
         />
-        <br />
+        </label><br/>
 
-        <button type="submit">Upload</button>
+        <div className="flex justify-center mt-3">
+          <button type="submit" className="protest w-[80%] text-md h-[50px] mx-auto"> 
+                <ButtonLeft prop={"Upload"} />
+          </button>
+          </div>
       </form>
 
       <div>{message}</div>

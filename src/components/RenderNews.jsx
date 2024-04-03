@@ -22,7 +22,7 @@ const RenderNews = () => {
             >
                 <div className="flex md:h-[75vh] h-[70vh] justify-center rounded-lg items-center bg-[rgba(0,0,0,0.7)]" >
                     <p className="px-8 md:text-8xl text-5xl text-center text-white tracking-widest mt-[80px] interf pb-2">
-                    Rendered News 
+                        Rendered News 
                     </p>
                 </div>
             </div>
