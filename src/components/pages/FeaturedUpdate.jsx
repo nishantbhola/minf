@@ -38,13 +38,13 @@ function FeaturedUpdate() {
         }}
       >
         <Parallax
-          blur={3}
+          blur={1}
           bgImage="https://wbc-rri.net/wp-content/uploads/2021/06/evangeline-shaw-CiO3eBBxqJA-unsplash-2.jpg"
           bgImageAlt="the mem"
-          strength={500}
+          strength={100}
         >
           <div className="flex h-[60vh] justify-center rounded-lg items-center">
-            <p className="text-6xl text-white tracking-widest mt-[60px] thermite pb-2">
+            <p className="text-6xl text-center text-white tracking-widest mt-[60px] thermite pb-2">
               Featured News..
             </p>
           </div>

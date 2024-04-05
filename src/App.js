@@ -3,7 +3,7 @@ import Footer from "./components/Footer";
 import Home from "./components/Home";
 import MainNav from "./components/MainNav";
 import About from "./components/pages/About";
-import News from "./components/pages/News";
+// import News from "./components/pages/News";
 import Connect from "./components/pages/Connect";
 import Contact from "./components/pages/Contact";
 import Event from "./components/pages/Event";
@@ -32,7 +32,7 @@ function App() {
             <Route path="contact" element={<Contact />} />
             <Route path="events" element={<Event />} />
             <Route path="events/:title" element={<RenderNews prop="events" />} />
-            <Route path="news" element={<News />} />
+            <Route path="news" element={<FeaturedUpdate />} />
             <Route path="rankings" element={<Ranking />} />
             <Route path="jnwbcamti" element={<JoinWBCAMTI />} />
           </Routes>
