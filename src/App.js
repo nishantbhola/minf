@@ -25,12 +25,13 @@ function App() {
           <Routes>
             <Route path="/" index element={<Home />} />
             <Route path="fupost" element={<FeatureupdatePost />} />
-            <Route path="render" element={<RenderNews />} />
             <Route path="about" element={<About />} />
             <Route path="featureupdate" element={<FeaturedUpdate />} />
+            <Route path="featureupdate/:title" element={<RenderNews prop="featured" />} />
             <Route path="connect" element={<Connect />} />
             <Route path="contact" element={<Contact />} />
             <Route path="events" element={<Event />} />
+            <Route path="events/:title" element={<RenderNews prop="events" />} />
             <Route path="news" element={<News />} />
             <Route path="rankings" element={<Ranking />} />
             <Route path="jnwbcamti" element={<JoinWBCAMTI />} />

@@ -37,7 +37,6 @@ function Feeds() {
               key={index}
               className={`h-[70vh] bg-green-200 w-[300px] rounded-md`}
             >
-              {console.log("")}
               <video
                 className="w-full h-full object-cover rounded-md"
                 muted
