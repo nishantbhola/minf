@@ -103,11 +103,17 @@ const Contact = () => {
               </div>
 
               <div className="text-center anton flex md:gap-5 gap-2 flex-col text-md mt-8">
-                <div className=" flex md:flex-row md:gap-8 gap-2 justify-center flex-col" >
-                  <p className="text-gray-600">Email : <span className="text-md text-center text-red-600 protest">admin@wbcmuaythaiindia.com</span> </p>
-                  <p className="text-gray-600">Phone : <span className="text-md text-center text-red-600 protest">(+91) 9205206059</span></p>
+                <div className=" flex md:gap-3 gap-2 justify-center flex-col" >
+                  <p className="text-gray-600">Email : <span className="text-md text-center text-black protest">admin@wbcmuaythaiindia.com</span> </p>
+                  <div className="flex flex-col">
+                    <p className="text-gray-600">Phone :</p>
+                    <p className="text-md text-center text-black protest">(+91) 7503850120 (Chairman),</p>
+                    <p className="text-md text-center text-black protest">(+91) 9811127337 (Dir. General),</p>
+                    <p className="text-md text-center text-black protest">(+91) 9205206059 (Admin. Secretary)</p>
+
+                  </div>
+                <p className="text-gray-600">Address : <span className="text-md text-center text-black protest">E-136, 2nd Floor, Opp. Metro Pillar No. 176, Shastri Nagar, New Delhi - 110052, India</span> </p>
                 </div>
-                <p className="text-gray-600">Address : <span className="text-md text-center text-red-600 protest">admin@wbcmuaythaiindia.com</span> </p>
               </div>
 
 
