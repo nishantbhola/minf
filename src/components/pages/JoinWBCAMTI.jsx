@@ -58,13 +58,13 @@ function JoinWBCAMTI(){
                         <label class="block uppercase tracking-wide text-gray-700 text-md interf font-bold mb-2" for="grid-first-name">
                             First Name
                         </label>
-                        <input class="appearance-none block w-full bg-transparent border-2 border-gray-500 text-gray-700 py-3 px-4 mb-3 leading-tight focus:outline-none " id="grid-first-name" type="text" placeholder="Jane" name="user_name"/>
+                        <input class="appearance-none block w-full bg-transparent border-2 border-gray-500 text-gray-700 py-3 px-4 mb-3 leading-tight focus:outline-none " id="grid-first-name" type="text" placeholder="Jane" name="user_name" required/>
                         </div>
                         <div class="w-full md:w-1/2 px-3">
                         <label class="block uppercase tracking-wide text-gray-700 text-md interf font-bold mb-2" for="grid-last-name">
                             Last Name
                         </label>
-                        <input class="appearance-none block w-full bg-transparent border-2 border-gray-500 text-gray-700 py-3 px-4 mb-3 leading-tight focus:outline-none " id="grid-last-name" type="text" placeholder="Doe" name="user_sname"/>
+                        <input class="appearance-none block w-full bg-transparent border-2 border-gray-500 text-gray-700 py-3 px-4 mb-3 leading-tight focus:outline-none " id="grid-last-name" type="text" placeholder="Doe" name="user_sname" required/>
                         </div>
                     </div>
                     <div class="flex flex-wrap -mx-3 mb-6">
@@ -80,7 +80,7 @@ function JoinWBCAMTI(){
                             <label class="block uppercase tracking-wide text-gray-700 text-md interf font-bold mb-2" for="email">
                                 Email
                             </label>
-                            <input class="appearance-none block w-full bg-transparent border-2 border-gray-500 text-gray-700 py-3 px-4 mb-3 leading-tight focus:outline-none " id="email" type="email" placeholder="Enter your email address" name="user_email"/>
+                            <input class="appearance-none block w-full bg-transparent border-2 border-gray-500 text-gray-700 py-3 px-4 mb-3 leading-tight focus:outline-none " id="email" type="email" placeholder="Enter your email address" name="user_email" required/>
                         </div>
                     </div>
 
@@ -89,14 +89,14 @@ function JoinWBCAMTI(){
                         <label class="block uppercase tracking-wide text-gray-700 text-md interf font-bold mb-2" for="grid-city">
                             City
                         </label>
-                        <input class="appearance-none block w-full bg-transparent border-2 border-gray-500 text-gray-700 py-3 px-4 mb-3 leading-tight focus:outline-none " id="grid-city" type="text" placeholder="Albuquerque" name="user_city"/>
+                        <input class="appearance-none block w-full bg-transparent border-2 border-gray-500 text-gray-700 py-3 px-4 mb-3 leading-tight focus:outline-none " id="grid-city" type="text" placeholder="Albuquerque" name="user_city" required/>
                         </div>
                         <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0">
                         <label class="block uppercase tracking-wide text-gray-700 text-md interf font-bold mb-2" for="grid-state">
                             State
                         </label>
                         <div class="relative">
-                            <select class="appearance-none block w-full bg-transparent border-2 border-gray-500 text-gray-700 py-3 px-4 mb-3 leading-tight focus:outline-none " id="grid-state" name="user_state">   
+                            <select class="appearance-none block w-full bg-transparent border-2 border-gray-500 text-gray-700 py-3 px-4 mb-3 leading-tight focus:outline-none " id="grid-state" name="user_state" required>   
                             <option disabled selected value="">Select a State/Union Territory</option>
                             <option>Andaman and Nicobar Islands</option>
                             <option>Andhra Pradesh</option>
@@ -144,7 +144,7 @@ function JoinWBCAMTI(){
                         <label class="block uppercase tracking-wide text-gray-700 text-md interf font-bold mb-2" for="grid-zip">
                             Zip
                         </label>
-                        <input class="appearance-none block w-full bg-transparent border-2 border-gray-500 text-gray-700 py-3 px-4 mb-3 leading-tight focus:outline-none " id="grid-zip" type="text" placeholder="90210" name="user_zip"/>
+                        <input class="appearance-none block w-full bg-transparent border-2 border-gray-500 text-gray-700 py-3 px-4 mb-3 leading-tight focus:outline-none " id="grid-zip" type="text" placeholder="90210" name="user_zip" required/>
                         </div>
                     </div>
                     <div class="flex flex-wrap -mx-3 mb-2">
@@ -153,7 +153,7 @@ function JoinWBCAMTI(){
                             Gender 
                         </label>
                         <div class="relative">
-                            <select class="appearance-none block w-full bg-transparent border-2 border-gray-500 text-gray-700 py-3 px-4 mb-3 leading-tight focus:outline-none " id="grid-state" name="user_gender">   
+                            <select class="appearance-none block w-full bg-transparent border-2 border-gray-500 text-gray-700 py-3 px-4 mb-3 leading-tight focus:outline-none " id="grid-state" name="user_gender" required>   
                             <option disabled selected value="">Gender</option>
                             <option>Male</option>
                             <option>Female</option>
@@ -168,7 +168,7 @@ function JoinWBCAMTI(){
                             Join 
                         </label>
                         <div class="relative">
-                            <select class="appearance-none block w-full bg-transparent border-2 border-gray-500 text-gray-700 py-3 px-4 mb-3 leading-tight focus:outline-none " id="grid-state" name="user_applyfor" >   
+                            <select class="appearance-none block w-full bg-transparent border-2 border-gray-500 text-gray-700 py-3 px-4 mb-3 leading-tight focus:outline-none " id="grid-state" name="user_applyfor" required>   
                             <option disabled selected value="">Join As</option>
                             <option>Athlete</option>
                             <option>Promoter</option>
@@ -184,7 +184,7 @@ function JoinWBCAMTI(){
                         <label class="block uppercase tracking-wide text-gray-700 text-md interf font-bold mb-2" for="grid-zip">
                             Age
                         </label>
-                        <input class="appearance-none block w-full bg-transparent border-2 border-gray-500 text-gray-700 py-3 px-4 mb-3 leading-tight focus:outline-none " id="grid-zip" type="number" placeholder="27" name="user_age"/>
+                        <input class="appearance-none block w-full bg-transparent border-2 border-gray-500 text-gray-700 py-3 px-4 mb-3 leading-tight focus:outline-none " id="grid-zip" type="number" placeholder="27" name="user_age" required/>
                         </div>
                     </div>
 
