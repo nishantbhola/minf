@@ -138,7 +138,7 @@ const FileUpload = () => {
 
           <label htmlFor="description" className="interf text-xl text-gray-600 ">Description:</label><br />
           <textarea
-            className="bg-transparent border-2 w-full mt-1 mb-4 border-gray-500 p-1 outline-none"
+            className="bg-transparent h-auto border-2 w-full mt-1 mb-4 border-gray-500 p-1 outline-none"
             name="description"
             id="description"
             value={description}
