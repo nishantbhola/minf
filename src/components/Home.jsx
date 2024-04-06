@@ -7,8 +7,33 @@ import xtremex from "../xtreme-in.png";
 import logo from "../logo.png";
 import beco from "../becomemem.jpeg";
 import { ButtonLeft } from "./Button";
+import axios from "axios";
+import React, { useState, useEffect } from "react";
+import LoadingPost from "./LoadingPost";
+
 
 function Home() {
+    const [newsData, setNewsData] = useState(null)
+    const [eventData, setEventData] = useState(null)
+    useEffect(()=>{
+      const fetchData = async () => {
+        try {
+            const response = await axios.get("https://successful-yoke-lion.cyclic.app/featured");
+            const response2 = await axios.get("https://successful-yoke-lion.cyclic.app/events");
+            if (response) {
+              const reverse = response.data.reverse();
+              const reverse2 = response2.data.reverse();
+              setNewsData(reverse);
+              setEventData(reverse2);
+            }
+          } catch (error) {
+            console.log(`Error fetching data: ${error.message}`);
+          }
+        };
+        
+        fetchData();
+    }, []);
+
   return (
     <div className="">
       <div className={`mt-[-60px] h-[85vh] px-5 md:h-[92vh] `}>
@@ -38,7 +63,7 @@ function Home() {
           strength={200}
         >
           <div className="flex h-[300px] w-full items-center justify-center bg-black opacity-50 md:h-[600px]">
-            <span className="thermite text-center text-4xl text-white md:text-8xl">
+            <span className="thermite text-center text-6xl px-5 md:px-0  text-white md:text-8xl">
               MUAYTHAI NATIONAL EVENT
             </span>
           </div>
@@ -49,15 +74,21 @@ function Home() {
         </div>
         <div className="container mx-auto px-5">
           <div>
-            <div className="mb-12 flex justify-between border-b-2 border-gray-400">
+            <div className="mb-5 flex justify-between border-b-2 border-gray-400">
               <p className="protest pb-2 text-3xl text-gray-700">Featured</p>
               <p className="thermite hidden cursor-pointer text-lg text-gray-500 md:block">
                 <a href="/featureupdate">view all</a>{" "}
                 <KeyboardArrowRightRoundedIcon />
               </p>
             </div>
-            <MidSec />
-            <div className="thermite text-md mx-auto mb-12  mt-[-40px] block h-[50px] w-[70%] md:hidden">
+            <div className=" w-full my-12 container w-[90%] mx-auto rounded-xl">
+              <div className=" w-full container mx-auto grid sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-5 ">
+                {newsData ? (newsData.slice(0, 4).map((d, i) => (
+                  <MidSec data={d} getTo="featureupdate" key={i} />
+                ))):<LoadingPost/>}
+              </div>
+            </div>
+            <div className="thermite text-md mx-auto mb-12 mt-5 block h-[50px] w-[70%] md:hidden">
               <a href="/featureupdate">
                 <ButtonLeft prop={"load more"} />
               </a>
@@ -68,14 +99,20 @@ function Home() {
             <Feeds />
           </div>
           <div>
-            <div className="mb-12 flex justify-between border-b-2 border-gray-400">
+            <div className="mt-5 flex justify-between border-b-2 border-gray-400">
               <p className="protest pb-2 text-3xl text-gray-700">Events</p>
               <p className="thermite hidden cursor-pointer text-lg text-gray-500 md:block">
                 <a href="/events">view all</a> <KeyboardArrowRightRoundedIcon />
               </p>
             </div>
-            <MidSec />
-            <div className="thermite text-md mx-auto mb-12  mt-[-40px] block h-[50px] w-[70%] md:hidden">
+            <div className=" w-full my-12 container w-[90%] mx-auto rounded-xl">
+              <div className=" w-full container mx-auto grid sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-5 ">
+                {eventData? (eventData.slice(0, 4).map((d, i) => (
+                  <MidSec data={d} getTo="events" key={i} />
+                ))):<LoadingPost/>}
+              </div>
+            </div>
+            <div className="thermite text-md mx-auto mb-12 mt-5 block h-[50px] w-[70%] md:hidden">
               <a href="/events">
                 <ButtonLeft prop={"load more"} />
               </a>
@@ -121,9 +158,9 @@ function Home() {
               <p className=" protest text-center text-3xl text-white md:text-6xl">
                 BECOME A MEMBER
               </p>
-              <button className="protest transition-bg border-4 border-white bg-transparent px-8 py-3 text-2xl text-white duration-200 hover:bg-red-600 md:text-4xl">
+              <a href="/jnwbcamti"><button className="protest transition-bg border-4 border-white bg-transparent px-8 py-3 text-2xl text-white duration-200 hover:bg-red-600 md:text-4xl">
                 Apply <KeyboardArrowRightRoundedIcon />
-              </button>
+              </button></a>
             </div>
           </div>
         </Parallax>
