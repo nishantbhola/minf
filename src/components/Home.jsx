@@ -21,8 +21,10 @@ function Home() {
             const response = await axios.get("https://successful-yoke-lion.cyclic.app/featured");
             const response2 = await axios.get("https://successful-yoke-lion.cyclic.app/events");
             if (response) {
-              setNewsData(response.data);
-              setEventData(response2.data);
+              const reverse = response.data.reverse();
+              const reverse2 = response2.data.reverse();
+              setNewsData(reverse);
+              setEventData(reverse2);
             }
           } catch (error) {
             console.log(`Error fetching data: ${error.message}`);

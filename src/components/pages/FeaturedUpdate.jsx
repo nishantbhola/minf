@@ -12,8 +12,8 @@ function FeaturedUpdate() {
       try {
           const response = await axios.get("https://successful-yoke-lion.cyclic.app/featured");
           if (response) {
-            setNewsData(response.data);
-            console.log(response.data)
+            const reverse = response.data.reverse();
+            setNewsData(reverse);
           }
         } catch (error) {
           console.log(`Error fetching data: ${error.message}`);

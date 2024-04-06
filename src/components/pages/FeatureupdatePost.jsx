@@ -79,13 +79,13 @@ const FileUpload = () => {
     formData.append("title", title);
     formData.append("upload", upload);
     try {
-      const response = await axios.post(
+      await axios.post(
         `https://successful-yoke-lion.cyclic.app/${upload}/${title}`,
         formData
       );
       setTitle("");
       setUpload("");
-      setMessage(response.data.message);
+      setMessage("done");
     } catch (error) {
       console.error("Error:", error);
       setMessage("Error occurred during upload.");
