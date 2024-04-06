@@ -63,7 +63,7 @@ const RenderNews = ({prop}) => {
                     </Masonry>
               </ResponsiveMasonry>
               <p className="text-justify  text-md my-5 text-gray-600 font-bold">
-                  {newsData.description.split('\n').slice(0, 2).map((paragraph, index) => (
+                  {newsData.description.split('\n').slice(2, ).map((paragraph, index) => (
                       <React.Fragment key={index}>
                         {paragraph}<br/>
                         <br />
