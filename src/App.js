@@ -14,6 +14,7 @@ import FeatureupdatePost from "./components/pages/FeatureupdatePost";
 import RenderNews from "./components/RenderNews";
 import ProgressBar from "./components/ProgressBar";
 import JoinWBCAMTI from "./components/pages/JoinWBCAMTI";
+import NotFound from "./components/pages/NotFound";
 
 function App() {
   return (
@@ -24,7 +25,7 @@ function App() {
           <MainNav />
           <Routes>
             <Route path="/" index element={<Home />} />
-            <Route path="fupost" element={<FeatureupdatePost />} />
+            <Route path="fu_post" element={<FeatureupdatePost />} />
             <Route path="about" element={<About />} />
             <Route path="featureupdate" element={<FeaturedUpdate />} />
             <Route path="featureupdate/:title" element={<RenderNews prop="featured" />} />
@@ -34,6 +35,7 @@ function App() {
             <Route path="events/:title" element={<RenderNews prop="events" />} />
             <Route path="news" element={<FeaturedUpdate />} />
             <Route path="rankings" element={<Ranking />} />
+            <Route path="*" element={<NotFound />} />
             <Route path="jnwbcamti" element={<JoinWBCAMTI />} />
           </Routes>
           <Footer />
