@@ -12,9 +12,12 @@ function Feeds() {
           "https://graph.facebook.com/me?fields=first_name,posts{source,type}&access_token=EAAOhcLPfWVkBO9AeXxZCRWn5PHKGTbqG9e17jTaS74hQiudAMPuVWTRZB4BQPEfdRhX3Pk9UplgWSnzwZAG9AcxvMOPn5C7bNkU31zPsmKp8KiXHmBFy5eGQZBrTZAuczDxVWZA2EfodVjM0DokngmN80JNKzjVpgXavNnujB4ROmuWD6vujpcDiDL7wZDZD"
         );
         if (response.data.posts && response.data.posts.data) {
-          setData(response.data.posts.data.slice(0, 4));
+          let arrvideo = response.data.posts.data.filter((e) => e.type === "video");
+          console.log(arrvideo)
+          setData(arrvideo.slice(0, 4));
         }
       } catch (error) {
+        setData([1,2,3,4]);
         console.error("Error fetching data:", error);
       }
     }
@@ -31,8 +34,8 @@ function Feeds() {
         </div>
         VIDEO
       </div>
-      {data.length > 0
-        ? data.map((e, index) => (
+      {console.log(data)}
+      {data.map((e, index) => (
             <div
               key={index}
               className={`h-[70vh] bg-green-200 w-[300px] rounded-md`}
@@ -46,31 +49,7 @@ function Feeds() {
               >
                 <source
                   src={
-                    e.type === "video"
-                      ? e.source
-                      : "https://video.wixstatic.com/video/6587d4_bef08a61503346ea852f4402debea9d6/480p/mp4/file.mp4"
-                  }
-                  type="video/mp4"
-                  preload="metadata"
-                />
-              </video>
-            </div>
-          ))
-        : [1, 2, 3, 4].map((index) => (
-            <div
-              key={index}
-              className={`h-full bg-green-200 w-[300px] rounded-md`}
-            >
-              <video
-                className="w-full h-full object-cover rounded-md"
-                muted
-                controls
-                loop
-                autoPlay={index === 1 ? true : false}
-              >
-                <source
-                  src={
-                    "https://video.wixstatic.com/video/6587d4_bef08a61503346ea852f4402debea9d6/480p/mp4/file.mp4"
+                    e.source ? e.source : "https://video.wixstatic.com/video/6587d4_bef08a61503346ea852f4402debea9d6/480p/mp4/file.mp4"
                   }
                   type="video/mp4"
                   preload="metadata"

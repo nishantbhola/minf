@@ -61,7 +61,7 @@ function Home() {
           strength={200}
         >
           <div className="flex h-[300px] w-full items-center justify-center bg-black opacity-50 md:h-[600px]">
-            <span className="thermite text-center text-4xl text-white md:text-8xl">
+            <span className="thermite text-center text-6xl px-5 md:px-0  text-white md:text-8xl">
               MUAYTHAI NATIONAL EVENT
             </span>
           </div>
@@ -156,9 +156,9 @@ function Home() {
               <p className=" protest text-center text-3xl text-white md:text-6xl">
                 BECOME A MEMBER
               </p>
-              <button className="protest transition-bg border-4 border-white bg-transparent px-8 py-3 text-2xl text-white duration-200 hover:bg-red-600 md:text-4xl">
+              <a href="/jnwbcamti"><button className="protest transition-bg border-4 border-white bg-transparent px-8 py-3 text-2xl text-white duration-200 hover:bg-red-600 md:text-4xl">
                 Apply <KeyboardArrowRightRoundedIcon />
-              </button>
+              </button></a>
             </div>
           </div>
         </Parallax>
