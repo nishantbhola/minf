@@ -13,7 +13,6 @@ function Feeds() {
         );
         if (response.data.posts && response.data.posts.data) {
           let arrvideo = response.data.posts.data.filter((e) => e.type === "video");
-          console.log(arrvideo)
           setData(arrvideo.slice(0, 4));
         }
       } catch (error) {
@@ -34,7 +33,6 @@ function Feeds() {
         </div>
         VIDEO
       </div>
-      {console.log(data)}
       {data.map((e, index) => (
             <div
               key={index}

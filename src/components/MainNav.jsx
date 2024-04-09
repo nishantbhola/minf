@@ -34,7 +34,7 @@ export default function MainNav() {
           } opacity-90 top-0 `}
         >
           <div className="h-[100px] mobafter flex justify-center items-center w-[40px] bg-neutral-900 top-1/2 rounded-r-full  absolute right-[-39px]">
-            <div class="ham">
+            <div className="ham">
               <input type="checkbox" checked={isChecked} onClick={isOpen} onChange={handleCheckboxChange} />
               <svg>
                 <use href="#menu" />
