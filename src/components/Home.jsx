@@ -18,8 +18,8 @@ function Home() {
     useEffect(()=>{
       const fetchData = async () => {
         try {
-            const response = await axios.get("https://successful-yoke-lion.cyclic.app/featured");
-            const response2 = await axios.get("https://successful-yoke-lion.cyclic.app/events");
+            const response = await axios.get("https://minf-backend.vercel.app/featured");
+            const response2 = await axios.get("https://minf-backend.vercel.app/events");
             if (response) {
               const reverse = response.data.reverse();
               const reverse2 = response2.data.reverse();
