@@ -72,7 +72,7 @@ const FileUpload = () => {
     formData.append("upload", upload);
     try {
       await axios.post(
-        `https://successful-yoke-lion.cyclic.app/${upload}/${title}`,
+        `https://minf-backend.vercel.app/${upload}/${title}`,
         formData
       );
       setTitle("");
