@@ -43,7 +43,7 @@ const FileUpload = () => {
 
     try {
       const response = await axios.post(
-        "http://localhost:3000/upload",
+        "http://minf-backend.vercel.app/upload",
         formData,
         {
           headers: {
