@@ -14,7 +14,7 @@ function FeaturedUpdate() {
   useEffect(()=>{
     const fetchData = async () => {
       try {
-          const response = await axios.get("https://successful-yoke-lion.cyclic.app/featured");
+          const response = await axios.get("https://minf-backend.vercel.app/featured");
           if (response) {
             const reverse = response.data.reverse();
             console.log(reverse)
