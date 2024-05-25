@@ -46,7 +46,7 @@ const FileUpload = () => {
     console.log(formData)
     try {
       const response = await axios.post(
-        "https://successful-yoke-lion.cyclic.app/upload",
+        "https://minf-backend.vercel.app/upload",
         formData
       );
       setTitle("");
