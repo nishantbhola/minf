@@ -44,7 +44,7 @@ function Home() {
           loop
         >
           <source
-            src="https://video.wixstatic.com/video/6587d4_bef08a61503346ea852f4402debea9d6/480p/mp4/file.mp4"
+            src="https://www.googleapis.com/drive/v3/files/118E8NiSAKKeX44feBnA24aNVD1_r_WSS?alt=media&key=AIzaSyCCZ0K6U72_kolEOd2lXVH3Cj1rIZkdHv4"
             type="video/mp4"
           />
         </video>
