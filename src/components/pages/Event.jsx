@@ -12,7 +12,7 @@ export default function Event() {
   useEffect(()=>{
     const fetchData = async () => {
       try {
-          const response = await axios.get("https://successful-yoke-lion.cyclic.app/events");
+          const response = await axios.get("https://minf-backend.vercel.app/events");
           if (response) {
             const reverse = response.data.reverse();
             setNewsData(reverse);

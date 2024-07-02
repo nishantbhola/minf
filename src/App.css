@@ -341,7 +341,7 @@ body{
 }
 
 @keyframes bounce-1 {
-  50% {
+  50% {  
     transform: translateY(-18px);
   }
 }
@@ -365,3 +365,105 @@ body{
     transform: translateY(-18px);
   }
 }
+
+
+
+
+
+
+/* TImer */
+
+
+body-c {
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.digit-container ul {
+  width: 100%;
+  overflow: hidden;
+}
+
+.digit-container li {
+  list-style-type: none;
+  font-size: 100px;
+  height: 100px;
+  width: 100%;
+  color: rgba(211, 211, 211, 0.6);
+}
+
+#seconds-list, #minute-list, #hour-list {
+  transition: all 0.5s ease-in-out;
+  transform: translateY(275px);
+}
+
+.active-c {
+  color: black !important;
+  transition: all 0.5s linear;
+}
+
+
+.imgbg{
+  background: url("https://minf-minf.s3.ap-south-1.amazonaws.com/bgimage.jpg") no-repeat center/cover;
+}
+
+
+/*------ EYE ANIMATION ------*/
+.containercus {
+  --color: #a5a5b0;
+  --size: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+  font-size: var(--size);
+  user-select: none;
+  fill: var(--color);
+}
+
+.containercus .eye {
+  position: absolute;
+  animation: keyframes-fill .5s;
+}
+
+.containercus .eye-slash {
+  position: absolute;
+  animation: keyframes-fill .5s;
+  display: none;
+}
+
+/* ------ On check event ------ */
+.containercus input:checked ~ .eye {
+  display: none;
+}
+
+.containercus input:checked ~ .eye-slash {
+  display: block;
+}
+
+/* ------ Hide the default checkbox ------ */
+.containercus input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* ------ Animation ------ */
+@keyframes keyframes-fill {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+
+  50% {
+    transform: scale(1.2);
+  }
+}
+
+/*------ EYE ANIMATION END ------*/

@@ -11,7 +11,7 @@ const RenderNews = ({prop}) => {
   useEffect(()=>{
     const fetchData = async () => {
       try {
-          const response = await axios.get(`https://successful-yoke-lion.cyclic.app/${prop}/${title}`);
+          const response = await axios.get(`https://minf-backend.vercel.app/${prop}/${title}`);
           if (response) {
             setNewsData(response.data);
             console.log(response.data)

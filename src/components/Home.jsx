@@ -10,6 +10,7 @@ import { ButtonLeft } from "./Button";
 import axios from "axios";
 import React, { useState, useEffect } from "react";
 import LoadingPost from "./LoadingPost";
+import Count from "./Count"
 
 
 function Home() {
@@ -18,8 +19,8 @@ function Home() {
     useEffect(()=>{
       const fetchData = async () => {
         try {
-            const response = await axios.get("https://successful-yoke-lion.cyclic.app/featured");
-            const response2 = await axios.get("https://successful-yoke-lion.cyclic.app/events");
+            const response = await axios.get("https://minf-backend.vercel.app/featured");
+            const response2 = await axios.get("https://minf-backend.vercel.app/events");
             if (response) {
               const reverse = response.data.reverse();
               const reverse2 = response2.data.reverse();
@@ -37,40 +38,39 @@ function Home() {
   return (
     <div className="">
       <div className={`mt-[-60px] h-[85vh] px-5 md:h-[92vh] `}>
-        <video
+        {/* <video
           className="h-full w-full rounded-2xl object-cover"
           muted
           autoPlay
           loop
         >
           <source
-            src="https://video.wixstatic.com/video/6587d4_bef08a61503346ea852f4402debea9d6/480p/mp4/file.mp4"
+            src="https://www.googleapis.com/drive/v3/files/118E8NiSAKKeX44feBnA24aNVD1_r_WSS?alt=media&key=AIzaSyCCZ0K6U72_kolEOd2lXVH3Cj1rIZkdHv4"
             type="video/mp4"
           />
-        </video>
+        </video> */}
+        <div className="imgbg w-full h-full rounded-2xl">
+        <div className="bg-[rgba(0,0,0,0.5)] w-full h-full rounded-2xl flex justify-center items-center interf text-white" style={{lineHeight: "1"}}>
+            <div className="md:text-[500%] md:text-left text-center tracking-wide mt-[-40px] text-[300%] px-8 md:x-0 text-white">
+              <p>WBC <span>amateur</span></p>
+              <p>MUAYTHAI INDIA </p>
+              <p>C'SHIP 2024 </p>
+              <span className="bg-[rgba(152,124,75)] formf text-[20px] rounded-xl py-3 px-5">
+                  30 AUG - 01 SEP
+              </span>
+            </div>
+          </div>
+        </div>
       </div>
       <div className={` mx-auto pb-5`}>
         <div className="thermite mx-auto flex justify-center">
-          <span className="mb-[30px] mt-[-40px] rounded-2xl bg-[#EAEBED] px-6 py-4 text-4xl tracking-widest md:px-12 md:py-6 md:text-6xl">
-            WELCOME
+          <span className="md:mb-[30px] text-white mt-[-150px] rounded-2xl bg-transparent px-6 py-4 text-4xl tracking-widest md:px-12 md:py-6 md:text-6xl">
+            <Count/>
           </span>
         </div>
 
-        <Parallax
-          blur={7}
-          bgImage="https://cdn.onefc.com/wp-content/uploads/2022/08/live-in-hd-one-on-prime-video-1-moraes-vs-johnson-ii-press-conference-1.jpg"
-          bgImageAlt="the cat"
-          strength={200}
-        >
-          <div className="flex h-[300px] w-full items-center justify-center bg-black opacity-50 md:h-[600px]">
-            <span className="thermite text-center text-6xl px-5 md:px-0  text-white md:text-8xl">
-              MUAYTHAI NATIONAL EVENT
-            </span>
-          </div>
-        </Parallax>
-
-        <div className="thermite mt-8 flex h-[80px] w-full items-center justify-center text-4xl md:text-5xl">
-          WHAT'S TRENDING NOW
+        <div className="thermite flex mt-5 h-[80px] w-full items-center justify-center text-4xl md:text-5xl">
+          TRENDING NOW
         </div>
         <div className="container mx-auto px-5">
           <div>
@@ -94,6 +94,25 @@ function Home() {
               </a>
             </div>
           </div>
+          <div className="mb-12">
+            <Parallax
+          blur={7}
+          bgImage="https://cdn.onefc.com/wp-content/uploads/2022/08/live-in-hd-one-on-prime-video-1-moraes-vs-johnson-ii-press-conference-1.jpg"
+          bgImageAlt="the cat"
+          strength={0}
+        >
+          <div className="flex flex-col h-[100vh] w-full items-center  justify-center bg-black opacity-90 md:h-[100vh]">
+            <p className="thermite text-center text-6xl px-5 md:px-12 text-[#adff2f] md:text-8xl ">
+              WBC AMATEUR MUAYTHAI INDIA C'SHIP 2024
+            </p>
+            <div className="thermite border-4 text-md mx-auto mb-12 mt-5 block h-[50px] w-[70%]">
+              <a href="/profile">
+                <ButtonLeft prop={"REGISTER"} />
+              </a>
+            </div>
+          </div>
+        </Parallax>
+        </div>
           <div className="">
             <div className="mb-5 flex justify-between border-b-2 border-gray-400"></div>
             <Feeds />

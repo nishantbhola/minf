@@ -9,7 +9,7 @@ function Feeds() {
     async function fetchData() {
       try {
         const response = await axios.get(
-          "https://graph.facebook.com/me?fields=first_name,posts{source,type}&access_token=EAALVZBuK2IgUBO3dQ7KLhqPdjxO7ZAZCVUgh6Nkj2lmykvyNZAQMW319qMJNQlZC6YpWuerMvSNGb6jCDMKPiGz6fZA6pLDmK3xn7suYFlDL9hCxGDOkjevgRCAOwoZBe9yQjfcbppeIKBCGNlMBiENJ6XYqqLWfFDpzXoWo7mTng5hapZBEeZA0kJAfsu0XOjYxb"
+          "https://graph.facebook.com/me?fields=first_name,posts{source,type}&access_token=EAALVZBuK2IgUBO3uG1ZCFBrNltTZBKNO5P8mpfHbQ5wGaOTgsLVh6saI8h8dImI2rQ2zRwCRZBnOU2VpZAltoRSfIaUjQlwR44IlZCy0FlCYccIejfmvFr7FjD6PfRkqQKQeROWvDw4zsGaAS23HUqDwqJ4L8VSsMW71jBWc1IixjxkQJ00KZAZAyoqaPasWZBpVG"
         );
         if (response.data.posts && response.data.posts.data) {
           let arrvideo = response.data.posts.data.filter((e) => e.type === "video");
@@ -47,7 +47,7 @@ function Feeds() {
               >
                 <source
                   src={
-                    e.source ? e.source : "https://video.wixstatic.com/video/6587d4_bef08a61503346ea852f4402debea9d6/480p/mp4/file.mp4"
+                    e.source ? e.source : "https://www.googleapis.com/drive/v3/files/118E8NiSAKKeX44feBnA24aNVD1_r_WSS?alt=media&key=AIzaSyCCZ0K6U72_kolEOd2lXVH3Cj1rIZkdHv4"
                   }
                   type="video/mp4"
                   preload="metadata"
